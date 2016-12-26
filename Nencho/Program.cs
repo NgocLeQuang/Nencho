@@ -24,7 +24,7 @@ namespace Nencho
             {
                 temp = false;
                 Frm_Login a = new Frm_Login();
-                a.lb_programName.Text = "Chương trình\nNencho";
+                a.lb_programName.Text = "          Chương trình\n        Nencho";
                 a.lb_version.Text = @"1.0";
                 a.IdProject = "Nencho";
                 a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2016\PHIẾU KIỂM ĐỊNH\Tool";

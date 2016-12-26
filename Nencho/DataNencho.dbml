@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Nencho" Class="DataNenchoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.10.254\BPOSERVER;Initial Catalog=Nencho;Persist Security Info=True;User ID=sa" SettingsObjectName="Nencho.Properties.Settings" SettingsPropertyName="NenchoConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.DeleteUsername" Method="DeleteUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateToken_TableUser" Method="UpdateToken_TableUser">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="ToKen" Parameter="toKen" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetListRole" Method="GetListRole">
+    <ElementType Name="GetListRoleResult">
+      <Column Name="IdRole" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetListUser" Method="GetListUser">
+    <ElementType Name="GetListUserResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IdRole" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NhanVien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRoLe" Method="GetRoLe">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="role" Type="System.String" DbType="NVarChar(100)" Direction="InOut" />
+    <ElementType Name="GetRoLeResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KiemTraLogin" Method="KiemTraLogin">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

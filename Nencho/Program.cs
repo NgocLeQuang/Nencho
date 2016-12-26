@@ -31,6 +31,11 @@ namespace Nencho
                 //a.LoginEvent += a_LoginEvent;
                 if (a.ShowDialog() == DialogResult.OK)
                 {
+                    Global.StrUsername = a.StrUserName;
+                    Global.StrBatch = a.StrBatch;
+                    Global.StrRole = a.StrRole;
+                    Global.Strtoken = a.Token;
+
                     Form1 frMain = new Form1();
 
                     if (frMain.ShowDialog() == DialogResult.Yes)

@@ -1,4 +1,4 @@
-﻿namespace Nencho
+﻿namespace Nencho.MyForm
 {
     partial class Form1
     {
@@ -36,4 +36,3 @@
         #endregion
     }
 }
-

@@ -75,6 +75,15 @@
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_Main.vi-VN.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_Main.vi.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_Main.vun.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

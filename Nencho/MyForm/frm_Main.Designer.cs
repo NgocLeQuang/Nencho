@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
@@ -44,8 +45,8 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tab_phanquyen = new DevExpress.XtraTab.XtraTabPage();
             this.tab_checker1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.tab_checker2 = new DevExpress.XtraTab.XtraTabPage();
+            this.tab_admin = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -85,131 +86,141 @@
             this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
+            resources.ApplyResources(this.bar2, "bar2");
             // 
             // barSubItem1
             // 
-            this.barSubItem1.Caption = "&Menu";
+            resources.ApplyResources(this.barSubItem1, "barSubItem1");
             this.barSubItem1.Id = 0;
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_logout),
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_exit)});
+            this.barSubItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barSubItem1.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
+            this.barSubItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barSubItem1.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
+            this.barSubItem1.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barSubItem1.MenuAppearance.HeaderItemAppearance.GradientMode")));
+            this.barSubItem1.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.MenuAppearance.HeaderItemAppearance.Image")));
             this.barSubItem1.Name = "barSubItem1";
             // 
             // btn_logout
             // 
-            this.btn_logout.Caption = "&Logout";
+            resources.ApplyResources(this.btn_logout, "btn_logout");
             this.btn_logout.Id = 1;
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_logout_ItemClick);
             // 
             // btn_exit
             // 
-            this.btn_exit.Caption = "&Exit";
+            resources.ApplyResources(this.btn_exit, "btn_exit");
             this.btn_exit.Id = 2;
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_exit_ItemClick);
             // 
             // barSubItem2
             // 
-            this.barSubItem2.Caption = "&Quản lý";
+            resources.ApplyResources(this.barSubItem2, "barSubItem2");
             this.barSubItem2.Id = 3;
             this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_quanlyuser)});
+            this.barSubItem2.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barSubItem2.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
+            this.barSubItem2.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barSubItem2.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
+            this.barSubItem2.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barSubItem2.MenuAppearance.HeaderItemAppearance.GradientMode")));
+            this.barSubItem2.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem2.MenuAppearance.HeaderItemAppearance.Image")));
             this.barSubItem2.Name = "barSubItem2";
             // 
             // btn_quanlyuser
             // 
-            this.btn_quanlyuser.Caption = "Quản lý &User";
+            resources.ApplyResources(this.btn_quanlyuser, "btn_quanlyuser");
             this.btn_quanlyuser.Id = 5;
             this.btn_quanlyuser.Name = "btn_quanlyuser";
             this.btn_quanlyuser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_quanlyuser_ItemClick);
             // 
             // barSubItem3
             // 
-            this.barSubItem3.Caption = "&Chức Năng";
+            resources.ApplyResources(this.barSubItem3, "barSubItem3");
             this.barSubItem3.Id = 4;
+            this.barSubItem3.MenuAppearance.HeaderItemAppearance.FontSizeDelta = ((int)(resources.GetObject("barSubItem3.MenuAppearance.HeaderItemAppearance.FontSizeDelta")));
+            this.barSubItem3.MenuAppearance.HeaderItemAppearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barSubItem3.MenuAppearance.HeaderItemAppearance.FontStyleDelta")));
+            this.barSubItem3.MenuAppearance.HeaderItemAppearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barSubItem3.MenuAppearance.HeaderItemAppearance.GradientMode")));
+            this.barSubItem3.MenuAppearance.HeaderItemAppearance.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem3.MenuAppearance.HeaderItemAppearance.Image")));
             this.barSubItem3.Name = "barSubItem3";
             // 
             // barDockControlTop
             // 
+            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
+            this.barDockControlTop.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlTop.Appearance.FontSizeDelta")));
+            this.barDockControlTop.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlTop.Appearance.FontStyleDelta")));
+            this.barDockControlTop.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlTop.Appearance.GradientMode")));
+            this.barDockControlTop.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlTop.Appearance.Image")));
             this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1125, 20);
             // 
             // barDockControlBottom
             // 
+            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
+            this.barDockControlBottom.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlBottom.Appearance.FontSizeDelta")));
+            this.barDockControlBottom.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlBottom.Appearance.FontStyleDelta")));
+            this.barDockControlBottom.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlBottom.Appearance.GradientMode")));
+            this.barDockControlBottom.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlBottom.Appearance.Image")));
             this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 628);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1125, 0);
             // 
             // barDockControlLeft
             // 
+            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
+            this.barDockControlLeft.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlLeft.Appearance.FontSizeDelta")));
+            this.barDockControlLeft.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlLeft.Appearance.FontStyleDelta")));
+            this.barDockControlLeft.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlLeft.Appearance.GradientMode")));
+            this.barDockControlLeft.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlLeft.Appearance.Image")));
             this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 608);
             // 
             // barDockControlRight
             // 
+            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
+            this.barDockControlRight.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlRight.Appearance.FontSizeDelta")));
+            this.barDockControlRight.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlRight.Appearance.FontStyleDelta")));
+            this.barDockControlRight.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlRight.Appearance.GradientMode")));
+            this.barDockControlRight.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlRight.Appearance.Image")));
             this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1125, 20);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 608);
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 20);
+            resources.ApplyResources(this.xtraTabControl1, "xtraTabControl1");
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tab_phanquyen;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1125, 608);
-            this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tab_phanquyen,
             this.tab_checker1,
-            this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.tab_checker2,
+            this.tab_admin});
             // 
             // tab_phanquyen
             // 
+            resources.ApplyResources(this.tab_phanquyen, "tab_phanquyen");
             this.tab_phanquyen.Name = "tab_phanquyen";
-            this.tab_phanquyen.Size = new System.Drawing.Size(1119, 580);
-            this.tab_phanquyen.Text = "Phân quyền";
             // 
             // tab_checker1
             // 
+            resources.ApplyResources(this.tab_checker1, "tab_checker1");
             this.tab_checker1.Name = "tab_checker1";
-            this.tab_checker1.Size = new System.Drawing.Size(1119, 580);
-            this.tab_checker1.Text = "Checker 1";
             // 
-            // xtraTabPage1
+            // tab_checker2
             // 
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1119, 580);
-            this.xtraTabPage1.Text = "xtraTabPage1";
+            resources.ApplyResources(this.tab_checker2, "tab_checker2");
+            this.tab_checker2.Name = "tab_checker2";
             // 
-            // xtraTabPage2
+            // tab_admin
             // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1119, 580);
-            this.xtraTabPage2.Text = "xtraTabPage2";
+            resources.ApplyResources(this.tab_admin, "tab_admin");
+            this.tab_admin.Name = "tab_admin";
             // 
             // frm_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 628);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frm_Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nencho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -237,7 +248,7 @@
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage tab_phanquyen;
         private DevExpress.XtraTab.XtraTabPage tab_checker1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraTab.XtraTabPage tab_checker2;
+        private DevExpress.XtraTab.XtraTabPage tab_admin;
     }
 }

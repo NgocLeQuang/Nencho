@@ -67,6 +67,12 @@
     <Compile Include="MyForm\frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_ManagerBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ManagerBatch.Designer.cs">
+      <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="DataNencho.dbml.layout">

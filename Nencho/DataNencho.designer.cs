@@ -83,13 +83,6 @@ namespace Nencho
 			return ((ISingleResult<GetListRoleResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUser")]
-		public ISingleResult<GetListUserResult> GetListUser()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetListUserResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetRoLe")]
 		public ISingleResult<GetRoLeResult> GetRoLe([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] ref string role)
 		{
@@ -109,6 +102,27 @@ namespace Nencho
 		public int KiemTraLogin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string password)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetListUser")]
+		public ISingleResult<GetListUserResult> GetListUser()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetListUserResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateUser")]
+		public int UpdateUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(200)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Idrole", DbType="NVarChar(200)")] string idrole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nhanvien", DbType="NVarChar(200)")] string nhanvien)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, idrole, nhanvien);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertUser")]
+		public int InsertUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(200)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Idrole", DbType="NVarChar(200)")] string idrole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nhanvien", DbType="NVarChar(200)")] string nhanvien)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, idrole, nhanvien);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -175,6 +189,32 @@ namespace Nencho
 		}
 	}
 	
+	public partial class GetRoLeResult
+	{
+		
+		private string _Column1;
+		
+		public GetRoLeResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(100)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
 	public partial class GetListUserResult
 	{
 		
@@ -184,7 +224,7 @@ namespace Nencho
 		
 		private string _IdRole;
 		
-		private string _NhanVien;
+		private string _Nhanvien;
 		
 		public GetListUserResult()
 		{
@@ -238,44 +278,18 @@ namespace Nencho
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NhanVien", DbType="NVarChar(200)")]
-		public string NhanVien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
+		public string Nhanvien
 		{
 			get
 			{
-				return this._NhanVien;
+				return this._Nhanvien;
 			}
 			set
 			{
-				if ((this._NhanVien != value))
+				if ((this._Nhanvien != value))
 				{
-					this._NhanVien = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetRoLeResult
-	{
-		
-		private string _Column1;
-		
-		public GetRoLeResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(100)")]
-		public string Column1
-		{
-			get
-			{
-				return this._Column1;
-			}
-			set
-			{
-				if ((this._Column1 != value))
-				{
-					this._Column1 = value;
+					this._Nhanvien = value;
 				}
 			}
 		}

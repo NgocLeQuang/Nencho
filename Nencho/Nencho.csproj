@@ -35,9 +35,13 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="LibraryLogin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>MyForm\LibraryLogin.dll</HintPath>
@@ -73,6 +77,12 @@
     <Compile Include="MyForm\frm_ManagerBatch.Designer.cs">
       <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_ManagerUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ManagerUser.Designer.cs">
+      <DependentUpon>frm_ManagerUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="DataNencho.dbml.layout">
@@ -89,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.vun.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ManagerUser.resx">
+      <DependentUpon>frm_ManagerUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

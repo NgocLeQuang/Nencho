@@ -18,7 +18,7 @@ namespace Nencho
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Main());
+            Application.Run(new frm_ManagerUser());
             //bool temp;
             //do
             //{

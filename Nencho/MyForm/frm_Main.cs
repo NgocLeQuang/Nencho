@@ -30,7 +30,8 @@ namespace Nencho.MyForm
 
         private void btn_quanlyuser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frm_ManagerUser fuser=new frm_ManagerUser();
+            fuser.ShowDialog();
         }
 
         private void frm_Main_Load(object sender, EventArgs e)

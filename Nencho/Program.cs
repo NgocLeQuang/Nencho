@@ -50,22 +50,21 @@ namespace Nencho
             while (temp);
         }
 
-        private static void a_ButtonLoginEven(int ilogin, string StrMachine, string StrUserWindow, string StrIpAddress, string Strusername, string password, string strbatch, string strrole, string Strtoken)
+        private static void a_ButtonLoginEven(int iLogin, string StrMachine, string StrUserWindow, string StrIpAddress, string Strusername, string Password, string Strbatch, string Strrole, string Strtoken)
         {
-            if (ilogin == 1)
+            if (iLogin == 1)
             {
                 Global.DataNencho.InsertLoginTime(Strusername, DateTime.Now, StrUserWindow, StrMachine, StrIpAddress, Strtoken);
                 Global.DataNencho.UpdateToken_TableUser(Strusername, Strtoken);
             }
         }
 
-
-        private static void a_LoginEvent(string username, string password, ref string strversion, ref int iKiemtraLogin, ref string role, ref ComboBox cbb)
+        private static void a_LoginEvent(string Username, string Password, ref string StrVersion, ref int iKiemtraLogin, ref string Role, ref ComboBox cbb)
         {
             try
             {
-                iKiemtraLogin = Global.DataNencho.KiemTraLogin(username, password);
-                strversion = (from w in Global.DataNencho.tbl_Versions where w.IdProject == "Nencho" select w.Version).FirstOrDefault();
+                iKiemtraLogin = Global.DataNencho.KiemTraLogin(Username, Password);
+                StrVersion = (from w in Global.DataNencho.tbl_Versions where w.IdProject == "Nencho" select w.Version).FirstOrDefault();
                
                 //if (role == "DESO")
                 //{

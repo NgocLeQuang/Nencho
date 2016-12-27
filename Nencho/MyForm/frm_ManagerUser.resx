@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;dgv_listuser.Name" xml:space="preserve">
+    <value>dgv_listuser</value>
+  </data>
+  <data name="&gt;&gt;btn_delete.Name" xml:space="preserve">
+    <value>btn_delete</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_delete.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_delete.Buttons7" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAABVhJREFUSEtt
         VQtMU2cUbgGRqKhIoKwpSoEKRMRkIplCUeISgWHisImMDdkCZpEtmGgmBJSHjDLqOt60WCOCJUCFAvIe
@@ -147,4 +153,657 @@
         gg==
 </value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txt_password.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_username.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txt_username.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dgv_listuser.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btn_them.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btn_them.Location" type="System.Drawing.Point, System.Drawing">
+    <value>366, 95</value>
+  </data>
+  <data name="btn_delete.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn5.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="txt_password.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dgv_listuser.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_username.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cbb_role.Name" xml:space="preserve">
+    <value>cbb_role</value>
+  </data>
+  <data name="labelControl4.Text" xml:space="preserve">
+    <value>Nhân Viên :</value>
+  </data>
+  <data name="gridColumn2.Width" type="System.Int32, mscorlib">
+    <value>179</value>
+  </data>
+  <data name="btn_delete.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Name" xml:space="preserve">
+    <value>labelControl3</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Name" xml:space="preserve">
+    <value>txt_username</value>
+  </data>
+  <data name="&gt;&gt;gridColumn5.Name" xml:space="preserve">
+    <value>gridColumn5</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="btn_delete.Buttons4" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v16.1" name="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="txt_password.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v16.1">
+    <value>Default</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_password.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>None</value>
+  </data>
+  <data name="gridColumn4.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btn_them.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v16.1" name="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="btn_delete.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v16.1">
+    <value>Glyph</value>
+  </data>
+  <data name="&gt;&gt;btn_Edit.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 71</value>
+  </data>
+  <data name="btn_delete.Buttons1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_delete.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cbb_role.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="labelControl3.Text" xml:space="preserve">
+    <value>Role :</value>
+  </data>
+  <data name="btn_delete.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dgv_listuser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>914, 389</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Name" xml:space="preserve">
+    <value>labelControl4</value>
+  </data>
+  <data name="labelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="txt_username.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btn_them.Name" xml:space="preserve">
+    <value>btn_them</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.TextLocation" type="DevExpress.XtraEditors.NavigatorButtonsTextLocation, DevExpress.XtraEditors.v16.1">
+    <value>Center</value>
+  </data>
+  <data name="txt_username.Properties.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;gridColumn4.Name" xml:space="preserve">
+    <value>gridColumn4</value>
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>Password :</value>
+  </data>
+  <data name="txt_password.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_password.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txt_username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="labelControl4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 100</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn4.Width" type="System.Int32, mscorlib">
+    <value>179</value>
+  </data>
+  <data name="txt_username.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Name" xml:space="preserve">
+    <value>labelControl2</value>
+  </data>
+  <data name="txt_nhanvien.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_password.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btn_delete.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v16.1">
+    <value>Default</value>
+  </data>
+  <data name="txt_nhanvien.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btn_delete.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btn_delete.Buttons3" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Tile</value>
+  </data>
+  <data name="labelControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 14</value>
+  </data>
+  <data name="txt_password.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelControl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btn_them.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frm_ManagerUser</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;labelControl2.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="btn_delete.Buttons10" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="gridColumn3.Width" type="System.Int32, mscorlib">
+    <value>179</value>
+  </data>
+  <data name="txt_nhanvien.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txt_username.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>UserName :</value>
+  </data>
+  <data name="cbb_role.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="cbb_role.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 21</value>
+  </data>
+  <data name="&gt;&gt;cbb_role.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txt_nhanvien.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_password.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="txt_nhanvien.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
+    <value>gridColumn1</value>
+  </data>
+  <data name="panelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="DevExpress.Data.v16.1" name="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="dgv_listuser.EmbeddedNavigator.AllowHtmlTextInToolTip" type="DevExpress.Utils.DefaultBoolean, DevExpress.Data.v16.1">
+    <value>Default</value>
+  </data>
+  <data name="btn_delete.Mask.ShowPlaceHolders" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn2.Caption" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="btn_Edit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gridColumn3.Caption" xml:space="preserve">
+    <value>Id Role</value>
+  </data>
+  <data name="txt_username.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txt_password.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;btn_Edit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_delete.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btn_them.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.ToolTipTitle" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txt_username.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_password.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="txt_username.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v16.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;gridColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btn_them.Text" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txt_password.Properties.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txt_password.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="txt_username.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelControl3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txt_username.Properties.Mask.PlaceHolder" type="System.Char, mscorlib" xml:space="preserve">
+    <value>_</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Manager User</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.UseMaskAsDisplayFormat" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Name" xml:space="preserve">
+    <value>labelControl1</value>
+  </data>
+  <data name="txt_password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="btn_Edit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>448, 95</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;labelControl4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_username.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;labelControl3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_password.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn_delete.Buttons6" type="DevExpress.XtraEditors.ImageLocation, DevExpress.XtraEditors.v16.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="btn_Edit.Text" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="&gt;&gt;cbb_role.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.ToolTipIconType" type="DevExpress.Utils.ToolTipIconType, DevExpress.Utils.v16.1">
+    <value>None</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="gridColumn1.Width" type="System.Int32, mscorlib">
+    <value>179</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="labelControl4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn4.Caption" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="txt_username.Properties.Mask.SaveLiteral" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="btn_delete.Buttons9" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btn_Edit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Name" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_them.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn5.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_username.Properties.Mask.EditMask" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 42</value>
+  </data>
+  <data name="btn_delete.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="labelControl4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="gridColumn5.Caption" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="txt_username.Properties.NullValuePromptShowForEmptyValue" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gridColumn3.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_nhanvien.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="cbb_role.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="txt_password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 38</value>
+  </data>
+  <data name="dgv_listuser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridColumn5.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.AutoComplete" type="DevExpress.XtraEditors.Mask.AutoCompleteType, DevExpress.XtraEditors.v16.1">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;btn_Edit.Name" xml:space="preserve">
+    <value>btn_Edit</value>
+  </data>
+  <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_nhanvien.Name" xml:space="preserve">
+    <value>txt_nhanvien</value>
+  </data>
+  <data name="&gt;&gt;btn_delete.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
+  <data name="labelControl3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
+    <value>gridColumn2</value>
+  </data>
+  <data name="panelControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="txt_nhanvien.Properties.Mask.BeepOnError" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txt_nhanvien.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 389</value>
+  </data>
+  <data name="cbb_role.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 67</value>
+  </data>
+  <data name="dgv_listuser.EmbeddedNavigator.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txt_password.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_delete.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="btn_them.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="txt_nhanvien.Properties.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>914, 520</value>
+  </data>
+  <data name="btn_Edit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;dgv_listuser.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_delete.Buttons5" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txt_nhanvien.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dgv_listuser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txt_username.Properties.Mask.MaskType" type="DevExpress.XtraEditors.Mask.MaskType, DevExpress.XtraEditors.v16.1">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;btn_Edit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txt_username.Parent" xml:space="preserve">
+    <value>panelControl1</value>
+  </data>
+  <data name="txt_username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 10</value>
+  </data>
+  <data name="&gt;&gt;txt_nhanvien.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="txt_password.Properties.NullValuePrompt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txt_password.Properties.AutoHeight" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_delete.Buttons2" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="&gt;&gt;panelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="txt_nhanvien.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 20</value>
+  </data>
+  <data name="&gt;&gt;gridColumn3.Name" xml:space="preserve">
+    <value>gridColumn3</value>
+  </data>
+  <data name="btn_delete.Buttons8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgv_listuser.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txt_username.Properties.Mask.IgnoreMaskBlank" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btn_delete.Buttons11" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txt_password.Name" xml:space="preserve">
+    <value>txt_password</value>
+  </data>
+  <data name="panelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>914, 131</value>
+  </data>
+  <data name="txt_nhanvien.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 97</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>vi</value>
+  </metadata>
 </root>

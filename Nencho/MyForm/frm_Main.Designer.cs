@@ -35,7 +35,7 @@
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btn_logout = new DevExpress.XtraBars.BarButtonItem();
             this.btn_exit = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.baritem_Manager = new DevExpress.XtraBars.BarSubItem();
             this.btn_manageruser = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -47,6 +47,7 @@
             this.tab_checker1 = new DevExpress.XtraTab.XtraTabPage();
             this.tab_checker2 = new DevExpress.XtraTab.XtraTabPage();
             this.tab_admin = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -65,7 +66,7 @@
             this.barSubItem1,
             this.btn_logout,
             this.btn_exit,
-            this.barSubItem2,
+            this.baritem_Manager,
             this.barSubItem3,
             this.btn_manageruser});
             this.barManager1.MainMenu = this.bar2;
@@ -79,7 +80,7 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.baritem_Manager),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3)});
             this.bar2.OptionsBar.AllowQuickCustomization = false;
             this.bar2.OptionsBar.DrawBorder = false;
@@ -111,13 +112,14 @@
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_exit_ItemClick);
             // 
-            // barSubItem2
+            // baritem_Manager
             // 
-            resources.ApplyResources(this.barSubItem2, "barSubItem2");
-            this.barSubItem2.Id = 3;
-            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            resources.ApplyResources(this.baritem_Manager, "baritem_Manager");
+            this.baritem_Manager.Enabled = false;
+            this.baritem_Manager.Id = 3;
+            this.baritem_Manager.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_manageruser)});
-            this.barSubItem2.Name = "barSubItem2";
+            this.baritem_Manager.Name = "baritem_Manager";
             // 
             // btn_manageruser
             // 
@@ -161,7 +163,8 @@
             this.tab_phanquyen,
             this.tab_checker1,
             this.tab_checker2,
-            this.tab_admin});
+            this.tab_admin,
+            this.xtraTabPage1});
             // 
             // tab_phanquyen
             // 
@@ -171,17 +174,26 @@
             // tab_checker1
             // 
             this.tab_checker1.Name = "tab_checker1";
+            this.tab_checker1.PageVisible = false;
             resources.ApplyResources(this.tab_checker1, "tab_checker1");
             // 
             // tab_checker2
             // 
             this.tab_checker2.Name = "tab_checker2";
+            this.tab_checker2.PageVisible = false;
             resources.ApplyResources(this.tab_checker2, "tab_checker2");
             // 
             // tab_admin
             // 
             this.tab_admin.Name = "tab_admin";
+            this.tab_admin.PageVisible = false;
             resources.ApplyResources(this.tab_admin, "tab_admin");
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.PageVisible = false;
+            resources.ApplyResources(this.xtraTabPage1, "xtraTabPage1");
             // 
             // frm_Main
             // 
@@ -214,7 +226,7 @@
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem btn_logout;
         private DevExpress.XtraBars.BarButtonItem btn_exit;
-        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.BarSubItem baritem_Manager;
         private DevExpress.XtraBars.BarSubItem barSubItem3;
         private DevExpress.XtraBars.BarButtonItem btn_manageruser;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
@@ -222,5 +234,6 @@
         private DevExpress.XtraTab.XtraTabPage tab_checker1;
         private DevExpress.XtraTab.XtraTabPage tab_checker2;
         private DevExpress.XtraTab.XtraTabPage tab_admin;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
     }
 }

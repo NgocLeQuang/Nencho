@@ -36,7 +36,11 @@ namespace Nencho.MyForm
 
         private void frm_Main_Load(object sender, EventArgs e)
         {
+            if (Global.StrRole == "Admin")
+            {
+                baritem_Manager.Enabled = true;
 
+            }
         }
     }
 }

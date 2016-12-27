@@ -65,17 +65,23 @@
       <DependentUpon>DataNencho.dbml</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="MyForm\frm_CreateFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_CreateFile.Designer.cs">
+      <DependentUpon>frm_CreateFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MyForm\frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyForm\frm_ManagerBatch.cs">
+    <Compile Include="MyForm\frm_ManagerFile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyForm\frm_ManagerBatch.Designer.cs">
-      <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
+    <Compile Include="MyForm\frm_ManagerFile.Designer.cs">
+      <DependentUpon>frm_ManagerFile.cs</DependentUpon>
     </Compile>
     <Compile Include="MyForm\frm_ManagerUser.cs">
       <SubType>Form</SubType>
@@ -88,6 +94,15 @@
     <None Include="DataNencho.dbml.layout">
       <DependentUpon>DataNencho.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="MyForm\frm_CreateFile.resx">
+      <DependentUpon>frm_CreateFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_CreateFile.vi-VN.resx">
+      <DependentUpon>frm_CreateFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_CreateFile.vi.resx">
+      <DependentUpon>frm_CreateFile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.vun.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ManagerFile.resx">
+      <DependentUpon>frm_ManagerFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ManagerFile.vi-VN.resx">
+      <DependentUpon>frm_ManagerFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_ManagerUser.resx">
       <DependentUpon>frm_ManagerUser.cs</DependentUpon>

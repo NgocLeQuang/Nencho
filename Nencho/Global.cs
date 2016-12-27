@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Nencho
+﻿namespace Nencho
 {
     internal class Global
     {
@@ -13,7 +7,5 @@ namespace Nencho
         public static string StrBatch;
         public static string Strtoken;
         public static string StrRole;
-
     }
-
 }

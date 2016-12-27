@@ -306,6 +306,24 @@
   <data name="&gt;&gt;tab_admin.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="xtraTabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1119, 580</value>
+  </data>
+  <data name="xtraTabPage1.Text" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Name" xml:space="preserve">
+    <value>xtraTabPage1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabPage, DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.Parent" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabPage1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
     <value>xtraTabControl1</value>
   </data>
@@ -354,10 +372,10 @@
   <data name="&gt;&gt;btn_exit.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;barSubItem2.Name" xml:space="preserve">
-    <value>barSubItem2</value>
+  <data name="&gt;&gt;baritem_Manager.Name" xml:space="preserve">
+    <value>baritem_Manager</value>
   </data>
-  <data name="&gt;&gt;barSubItem2.Type" xml:space="preserve">
+  <data name="&gt;&gt;baritem_Manager.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;btn_manageruser.Name" xml:space="preserve">
@@ -387,7 +405,7 @@
   <data name="btn_exit.Caption" xml:space="preserve">
     <value>&amp;Exit</value>
   </data>
-  <data name="barSubItem2.Caption" xml:space="preserve">
+  <data name="baritem_Manager.Caption" xml:space="preserve">
     <value>&amp;Manager</value>
   </data>
   <data name="barSubItem3.Caption" xml:space="preserve">

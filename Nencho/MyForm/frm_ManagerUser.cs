@@ -70,7 +70,6 @@ namespace Nencho.MyForm
         private void btn_them_Click(object sender, EventArgs e)
         {
             string pass = GetMd5Hash(txt_password.Text);
-
             string roleid = cbb_role.SelectedValue != null ? cbb_role.SelectedValue.ToString() : "";
 
             if (!string.IsNullOrEmpty(roleid) && !string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(pass))

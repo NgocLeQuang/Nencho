@@ -120,6 +120,24 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="barSubItem1.Caption" xml:space="preserve">
+    <value>&amp;Menu</value>
+  </data>
+  <data name="btn_logout.Caption" xml:space="preserve">
+    <value>&amp;Logout</value>
+  </data>
+  <data name="btn_exit.Caption" xml:space="preserve">
+    <value>&amp;Exit</value>
+  </data>
+  <data name="baritem_Manager.Caption" xml:space="preserve">
+    <value>&amp;Manager</value>
+  </data>
+  <data name="btn_manageruser.Caption" xml:space="preserve">
+    <value>Quản lý &amp;User</value>
+  </data>
+  <data name="barSubItem3.Caption" xml:space="preserve">
+    <value>&amp;Option</value>
+  </data>
   <data name="bar2.Text" xml:space="preserve">
     <value>Main menu</value>
   </data>
@@ -132,7 +150,7 @@
     <value>0, 0</value>
   </data>
   <data name="barDockControlTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 20</value>
+    <value>1134, 20</value>
   </data>
   <data name="&gt;&gt;barDockControlTop.Name" xml:space="preserve">
     <value>barDockControlTop</value>
@@ -153,7 +171,7 @@
     <value>0, 628</value>
   </data>
   <data name="barDockControlBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 0</value>
+    <value>1134, 0</value>
   </data>
   <data name="&gt;&gt;barDockControlBottom.Name" xml:space="preserve">
     <value>barDockControlBottom</value>
@@ -192,7 +210,7 @@
     <value>Right</value>
   </data>
   <data name="barDockControlRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1125, 20</value>
+    <value>1134, 20</value>
   </data>
   <data name="barDockControlRight.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 608</value>
@@ -219,7 +237,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 628</value>
+    <value>1134, 628</value>
   </data>
   <data name="xtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -246,14 +264,14 @@
     <value>0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1125, 608</value>
+    <value>1134, 608</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="tab_checker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1119, 580</value>
+    <value>1128, 580</value>
   </data>
   <data name="tab_checker1.Text" xml:space="preserve">
     <value>Checker 1</value>
@@ -395,23 +413,5 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barSubItem1.Caption" xml:space="preserve">
-    <value>&amp;Menu</value>
-  </data>
-  <data name="btn_logout.Caption" xml:space="preserve">
-    <value>&amp;Logout</value>
-  </data>
-  <data name="btn_exit.Caption" xml:space="preserve">
-    <value>&amp;Exit</value>
-  </data>
-  <data name="baritem_Manager.Caption" xml:space="preserve">
-    <value>&amp;Manager</value>
-  </data>
-  <data name="barSubItem3.Caption" xml:space="preserve">
-    <value>&amp;Option</value>
-  </data>
-  <data name="btn_manageruser.Caption" xml:space="preserve">
-    <value>Quản lý &amp;User</value>
   </data>
 </root>

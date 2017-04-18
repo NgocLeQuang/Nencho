@@ -253,6 +253,7 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.cbb_batchno_error = new System.Windows.Forms.ComboBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.btn_tiendo = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_96)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_97)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_98)).BeginInit();
@@ -394,9 +395,10 @@
             this.btn_language_english,
             this.btn_language_japan,
             this.btn_language_vietnam,
-            this.btn_nangsuat});
+            this.btn_nangsuat,
+            this.btn_tiendo});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 18;
+            this.barManager1.MaxItemId = 19;
             // 
             // bar2
             // 
@@ -445,7 +447,8 @@
             this.baritem_Manager.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_ManagerFiles),
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_manageruser),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btn_nangsuat)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_nangsuat),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_tiendo)});
             this.baritem_Manager.Name = "baritem_Manager";
             // 
             // btn_ManagerFiles
@@ -2553,6 +2556,13 @@
             resources.ApplyResources(this.labelControl9, "labelControl9");
             this.labelControl9.Name = "labelControl9";
             // 
+            // btn_tiendo
+            // 
+            resources.ApplyResources(this.btn_tiendo, "btn_tiendo");
+            this.btn_tiendo.Id = 18;
+            this.btn_tiendo.Name = "btn_tiendo";
+            this.btn_tiendo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tiendo_ItemClick);
+            // 
             // frm_Main
             // 
             resources.ApplyResources(this, "$this");
@@ -2881,5 +2891,6 @@
         private DevExpress.XtraGrid.GridControl gridControl_temp;
         private DevExpress.XtraGrid.Views.Grid.GridView dgv_temp;
         private DevExpress.XtraBars.BarButtonItem btn_nangsuat;
+        private DevExpress.XtraBars.BarButtonItem btn_tiendo;
     }
 }

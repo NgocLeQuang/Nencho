@@ -109,7 +109,7 @@
   </Table>
   <Table Name="dbo.tbl_DataColumn36" Member="tbl_DataColumn36s">
     <Type Name="tbl_DataColumn36">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="dataColumn36" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
     </Type>
   </Table>
@@ -124,52 +124,6 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="dataColumn37" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="dataColumn38" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_Input" Member="tbl_Inputs">
-    <Type Name="tbl_Input">
-      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_58" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_59" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="IDFile" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_Role" Member="tbl_Roles">
-    <Type Name="tbl_Role">
-      <Column Name="IdRole" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="RoleName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_User" Member="tbl_Users">
-    <Type Name="tbl_User">
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="IdRole" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Token" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_File" Member="tbl_Files">
@@ -229,6 +183,38 @@
       <Column Name="Date_ReadFile_Check_2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="SubmitFile_Check_2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="Date_SubmitFile_Check_2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TienDoCheck1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TienDoCheck2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Input" Member="tbl_Inputs">
+    <Type Name="tbl_Input">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_58" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_59" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IDFile" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_LoginTime" Member="tbl_LoginTimes">
@@ -236,11 +222,21 @@
       <Column Name="UserName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="TimeLogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TimeLogout" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="TimeBlog" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeBlog" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeFree" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastRequest" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="MachineName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="WindowUser" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="IpAddress" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="Token" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Project" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Role" Member="tbl_Roles">
+    <Type Name="tbl_Role">
+      <Column Name="IdRole" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_TokenLogin" Member="tbl_TokenLogins">
@@ -252,16 +248,83 @@
       <Column Name="DateLogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_User" Member="tbl_Users">
+    <Type Name="tbl_User">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IdRole" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.CheckTruong_36" Method="CheckTruong_36">
     <Parameter Name="Truong36" Parameter="truong36" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.UpdateUser" Method="UpdateUser">
-    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="Idrole" Parameter="idrole" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="Nhanvien" Parameter="nhanvien" Type="System.String" DbType="NVarChar(200)" />
-    <Return Type="System.Int32" />
+  <Function Name="dbo.XuatDuLieuTong" Method="XuatDuLieuTong">
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="XuatDuLieuTongResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_J" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_K" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_M" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_N" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_O" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_P" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Q" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_R" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_S" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_T" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_U" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_X" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Cot_Y" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_V" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AB" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AA1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AB1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_391" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_401" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_411" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_421" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_431" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AE1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_51" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_52" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_53" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_55" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_551" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_56" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_57" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_58" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_59" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_60" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_61" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_62" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_63" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_64" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_65" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_66" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_67" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_68" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_69" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_70" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_71" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_72" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_73" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_74" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.CheckTruong_37" Method="CheckTruong_37">
     <Parameter Name="Truong37" Parameter="truong37" Type="System.String" DbType="NVarChar(255)" />
@@ -270,6 +333,31 @@
   <Function Name="dbo.CheckTruong_38" Method="CheckTruong_38">
     <Parameter Name="Truong38" Parameter="truong38" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChiTietTienDo_Checker1" Method="ChiTietTienDo_Checker1">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietTienDo_Checker1Result">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTietTienDo_Checker2" Method="ChiTietTienDo_Checker2">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietTienDo_Checker2Result">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ChiTietUser_Checker1" Method="ChiTietUser_Checker1">
+    <Parameter Name="cot_z" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="cot_g" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietUser_Checker1Result">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.CreateBatch" Method="CreateBatch">
     <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
@@ -309,6 +397,51 @@
     <Parameter Name="Cot_AD" Parameter="cot_AD" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="Cot_AE" Parameter="cot_AE" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="Cot_AF" Parameter="cot_AF" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CreateFile_New" Method="CreateFile_New">
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_C" Parameter="cot_C" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_D" Parameter="cot_D" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_E" Parameter="cot_E" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_F" Parameter="cot_F" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_H" Parameter="cot_H" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_I" Parameter="cot_I" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_J" Parameter="cot_J" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_K" Parameter="cot_K" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_L" Parameter="cot_L" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_M" Parameter="cot_M" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_N" Parameter="cot_N" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_O" Parameter="cot_O" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_P" Parameter="cot_P" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_Q" Parameter="cot_Q" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_R" Parameter="cot_R" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_S" Parameter="cot_S" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_T" Parameter="cot_T" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_U" Parameter="cot_U" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_V" Parameter="cot_V" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_W" Parameter="cot_W" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_X" Parameter="cot_X" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_Y" Parameter="cot_Y" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AA" Parameter="cot_AA" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AB" Parameter="cot_AB" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AC" Parameter="cot_AC" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AD" Parameter="cot_AD" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AE" Parameter="cot_AE" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AF" Parameter="cot_AF" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AG" Parameter="cot_AG" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteData_Check" Method="DeleteData_Check">
+    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteData_De" Method="DeleteData_De">
+    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.DeleteDataColumn36" Method="DeleteDataColumn36">
@@ -389,6 +522,13 @@
       <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetBatchNO_ExportExcel" Method="GetBatchNO_ExportExcel">
+    <Parameter Name="ngaybatdau" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ngayketthuc" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetBatchNO_ExportExcelResult">
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.GetDataAdmin" Method="GetDataAdmin">
     <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
@@ -443,6 +583,31 @@
       <Column Name="Truong_74" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetDataChecker" Method="GetDataChecker">
+    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetDataCheckerResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.GetDataChecker_TabAdmin" Method="GetDataChecker_TabAdmin">
     <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
     <ElementType Name="GetDataChecker_TabAdminResult">
@@ -462,6 +627,31 @@
       <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetDataCheckerComplete" Method="GetDataCheckerComplete">
+    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetDataCheckerCompleteResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.GetDataColumn36" Method="GetDataColumn36">
     <ElementType Name="GetDataColumn36Result">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -479,6 +669,85 @@
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="dataColumn37" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="dataColumn38" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDataDE" Method="GetDataDE">
+    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetDataDEResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDataDEComplete" Method="GetDataDEComplete">
+    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetDataDECompleteResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDataDivision" Method="GetDataDivision">
+    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetDataDivisionResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_J" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_K" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_M" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_N" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_O" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_P" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Q" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_R" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_S" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_T" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_U" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_X" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Cot_Y" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_V" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cot_AA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AB" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_AF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.GetDataDivision_Load" Method="GetDataDivision_Load">
@@ -619,6 +888,15 @@
       <Column Name="Token" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.InsertAdmin" Method="InsertAdmin">
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idfile" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_AG" Parameter="cot_AG" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.InSertDataColumn36" Method="InSertDataColumn36">
     <Parameter Name="data" Type="System.String" DbType="NVarChar(500)" />
     <Return Type="System.Int32" />
@@ -630,6 +908,25 @@
   <Function Name="dbo.InSertDataColumn38" Method="InSertDataColumn38">
     <Parameter Name="dataColumn37" Type="System.String" DbType="NVarChar(200)" />
     <Parameter Name="dataColumn38" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertLoginTime_new" Method="InsertLoginTime_new">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="project" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.InsertTableChecker" Method="InsertTableChecker">
@@ -662,6 +959,66 @@
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NangSuatCheck1" Method="NangSuatCheck1">
+    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="NangSuatCheck1Result">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuSai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="HieuSuat" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NangSuatCheck2" Method="NangSuatCheck2">
+    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="NangSuatCheck2Result">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuSai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="HieuSuat" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ResetToken" Method="ResetToken">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RestoreTableAdmin" Method="RestoreTableAdmin">
+    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_53" Parameter="truong_53" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_54" Parameter="truong_54" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_55" Parameter="truong_55" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_56" Parameter="truong_56" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_60" Parameter="truong_60" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_61" Parameter="truong_61" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_62" Parameter="truong_62" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_63" Parameter="truong_63" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_67" Parameter="truong_67" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ThongKeTienDo_Checker1" Method="ThongKeTienDo_Checker1">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ThongKeTienDo_Checker1Result">
+      <Column Name="name" Type="System.String" DbType="NVarChar(23) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ThongKeTienDo_Checker2" Method="ThongKeTienDo_Checker2">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ThongKeTienDo_Checker2Result">
+      <Column Name="name" Type="System.String" DbType="NVarChar(23) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
   <Function Name="dbo.Update_TableAdmin" Method="Update_TableAdmin">
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(255)" />
@@ -831,257 +1188,6 @@
     <Parameter Name="dataColumn38" Type="System.String" DbType="NVarChar(500)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.UpdateToken_TableUser" Method="UpdateToken_TableUser">
-    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="ToKen" Parameter="toKen" Type="System.String" DbType="NVarChar(200)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.GetDataDE" Method="GetDataDE">
-    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
-    <ElementType Name="GetDataDEResult">
-      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetDataDEComplete" Method="GetDataDEComplete">
-    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
-    <ElementType Name="GetDataDECompleteResult">
-      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetDataDivision" Method="GetDataDivision">
-    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
-    <ElementType Name="GetDataDivisionResult">
-      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_J" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_K" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_M" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_N" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_O" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_P" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_Q" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_R" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_S" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_T" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_U" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_X" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="DateCreate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Cot_Y" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_V" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Cot_AA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_AB" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_AC" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_AD" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_AE" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Cot_AF" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetDataChecker" Method="GetDataChecker">
-    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
-    <ElementType Name="GetDataCheckerResult">
-      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetDataCheckerComplete" Method="GetDataCheckerComplete">
-    <Parameter Name="BatchNo" Parameter="batchNo" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
-    <ElementType Name="GetDataCheckerCompleteResult">
-      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_39" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_40" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_41" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_42" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_43" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.DeleteData_Check" Method="DeleteData_Check">
-    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.DeleteData_De" Method="DeleteData_De">
-    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.RestoreTableAdmin" Method="RestoreTableAdmin">
-    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_53" Parameter="truong_53" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_54" Parameter="truong_54" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_55" Parameter="truong_55" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_56" Parameter="truong_56" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_60" Parameter="truong_60" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_61" Parameter="truong_61" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_62" Parameter="truong_62" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_63" Parameter="truong_63" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_67" Parameter="truong_67" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.CreateFile_New" Method="CreateFile_New">
-    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_C" Parameter="cot_C" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_D" Parameter="cot_D" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_E" Parameter="cot_E" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_F" Parameter="cot_F" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_H" Parameter="cot_H" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_I" Parameter="cot_I" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_J" Parameter="cot_J" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_K" Parameter="cot_K" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_L" Parameter="cot_L" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_M" Parameter="cot_M" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_N" Parameter="cot_N" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_O" Parameter="cot_O" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_P" Parameter="cot_P" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_Q" Parameter="cot_Q" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_R" Parameter="cot_R" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_S" Parameter="cot_S" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_T" Parameter="cot_T" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_U" Parameter="cot_U" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_V" Parameter="cot_V" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_W" Parameter="cot_W" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_X" Parameter="cot_X" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_Y" Parameter="cot_Y" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AA" Parameter="cot_AA" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AB" Parameter="cot_AB" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AC" Parameter="cot_AC" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AD" Parameter="cot_AD" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AE" Parameter="cot_AE" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AF" Parameter="cot_AF" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AG" Parameter="cot_AG" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.InsertAdmin" Method="InsertAdmin">
-    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="idfile" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_G" Parameter="cot_G" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_Z" Parameter="cot_Z" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Cot_AG" Parameter="cot_AG" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.GetBatchNO_ExportExcel" Method="GetBatchNO_ExportExcel">
-    <Parameter Name="ngaybatdau" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="ngayketthuc" Type="System.String" DbType="NVarChar(100)" />
-    <ElementType Name="GetBatchNO_ExportExcelResult">
-      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.NangSuatCheck1" Method="NangSuatCheck1">
-    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="NangSuatCheck1Result">
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PhieuDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PhieuSai" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThoiGian" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
-      <Column Name="HieuSuat" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.NangSuatCheck2" Method="NangSuatCheck2">
-    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="NangSuatCheck2Result">
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PhieuDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PhieuSai" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThoiGian" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
-      <Column Name="HieuSuat" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.updateToken" Method="updateToken">
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
-    <Parameter Name="token" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.InsertLoginTime_new" Method="InsertLoginTime_new">
-    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="project" Type="System.String" DbType="NVarChar(100)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.UpdateTimeLastRequest" Method="UpdateTimeLastRequest">
     <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
@@ -1090,10 +1196,49 @@
     <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ResetToken" Method="ResetToken">
+  <Function Name="dbo.updateToken" Method="updateToken">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
-    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="token" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateToken_TableUser" Method="UpdateToken_TableUser">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="ToKen" Parameter="toKen" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateUser" Method="UpdateUser">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Idrole" Parameter="idrole" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Nhanvien" Parameter="nhanvien" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.XuatDuLieuDacBiet" Method="XuatDuLieuDacBiet">
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="XuatDuLieuDacBietResult">
+      <Column Name="IDFile" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_26" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_27" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_28" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_29" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_30" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_31" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_32" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_33" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_34" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_35" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_36" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.XuatDuLieuLichSu" Method="XuatDuLieuLichSu">
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="XuatDuLieuLichSuResult">
+      <Column Name="IDFile" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

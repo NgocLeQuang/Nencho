@@ -42,30 +42,27 @@ namespace Nencho
     partial void Inserttbl_Checker_Backup(tbl_Checker_Backup instance);
     partial void Updatetbl_Checker_Backup(tbl_Checker_Backup instance);
     partial void Deletetbl_Checker_Backup(tbl_Checker_Backup instance);
-    partial void Inserttbl_DataColumn36(tbl_DataColumn36 instance);
-    partial void Updatetbl_DataColumn36(tbl_DataColumn36 instance);
-    partial void Deletetbl_DataColumn36(tbl_DataColumn36 instance);
     partial void Inserttbl_DataColumn37(tbl_DataColumn37 instance);
     partial void Updatetbl_DataColumn37(tbl_DataColumn37 instance);
     partial void Deletetbl_DataColumn37(tbl_DataColumn37 instance);
     partial void Inserttbl_DataColumn38(tbl_DataColumn38 instance);
     partial void Updatetbl_DataColumn38(tbl_DataColumn38 instance);
     partial void Deletetbl_DataColumn38(tbl_DataColumn38 instance);
+    partial void Inserttbl_File(tbl_File instance);
+    partial void Updatetbl_File(tbl_File instance);
+    partial void Deletetbl_File(tbl_File instance);
     partial void Inserttbl_Input(tbl_Input instance);
     partial void Updatetbl_Input(tbl_Input instance);
     partial void Deletetbl_Input(tbl_Input instance);
     partial void Inserttbl_Role(tbl_Role instance);
     partial void Updatetbl_Role(tbl_Role instance);
     partial void Deletetbl_Role(tbl_Role instance);
-    partial void Inserttbl_User(tbl_User instance);
-    partial void Updatetbl_User(tbl_User instance);
-    partial void Deletetbl_User(tbl_User instance);
-    partial void Inserttbl_File(tbl_File instance);
-    partial void Updatetbl_File(tbl_File instance);
-    partial void Deletetbl_File(tbl_File instance);
     partial void Inserttbl_TokenLogin(tbl_TokenLogin instance);
     partial void Updatetbl_TokenLogin(tbl_TokenLogin instance);
     partial void Deletetbl_TokenLogin(tbl_TokenLogin instance);
+    partial void Inserttbl_User(tbl_User instance);
+    partial void Updatetbl_User(tbl_User instance);
+    partial void Deletetbl_User(tbl_User instance);
     #endregion
 		
 		public DataNenchoDataContext() : 
@@ -162,35 +159,19 @@ namespace Nencho
 			}
 		}
 		
-		public System.Data.Linq.Table<tbl_Input> tbl_Inputs
-		{
-			get
-			{
-				return this.GetTable<tbl_Input>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tbl_Role> tbl_Roles
-		{
-			get
-			{
-				return this.GetTable<tbl_Role>();
-			}
-		}
-		
-		public System.Data.Linq.Table<tbl_User> tbl_Users
-		{
-			get
-			{
-				return this.GetTable<tbl_User>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tbl_File> tbl_Files
 		{
 			get
 			{
 				return this.GetTable<tbl_File>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_Input> tbl_Inputs
+		{
+			get
+			{
+				return this.GetTable<tbl_Input>();
 			}
 		}
 		
@@ -202,11 +183,27 @@ namespace Nencho
 			}
 		}
 		
+		public System.Data.Linq.Table<tbl_Role> tbl_Roles
+		{
+			get
+			{
+				return this.GetTable<tbl_Role>();
+			}
+		}
+		
 		public System.Data.Linq.Table<tbl_TokenLogin> tbl_TokenLogins
 		{
 			get
 			{
 				return this.GetTable<tbl_TokenLogin>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tbl_User> tbl_Users
+		{
+			get
+			{
+				return this.GetTable<tbl_User>();
 			}
 		}
 		
@@ -217,11 +214,11 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateUser")]
-		public int UpdateUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(200)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Idrole", DbType="NVarChar(200)")] string idrole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nhanvien", DbType="NVarChar(200)")] string nhanvien)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XuatDuLieuTong")]
+		public ISingleResult<XuatDuLieuTongResult> XuatDuLieuTong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, idrole, nhanvien);
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName);
+			return ((ISingleResult<XuatDuLieuTongResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CheckTruong_37")]
@@ -236,6 +233,27 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), truong38);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDo_Checker1")]
+		public ISingleResult<ChiTietTienDo_Checker1Result> ChiTietTienDo_Checker1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((ISingleResult<ChiTietTienDo_Checker1Result>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDo_Checker2")]
+		public ISingleResult<ChiTietTienDo_Checker2Result> ChiTietTienDo_Checker2([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((ISingleResult<ChiTietTienDo_Checker2Result>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietUser_Checker1")]
+		public ISingleResult<ChiTietUser_Checker1Result> ChiTietUser_Checker1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string cot_z, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string cot_g)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_z, cot_g);
+			return ((ISingleResult<ChiTietUser_Checker1Result>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CreateBatch")]
@@ -280,6 +298,59 @@ namespace Nencho
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AF", DbType="NVarChar(255)")] string cot_AF)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName, cot_C, cot_D, cot_E, cot_F, cot_G, cot_H, cot_I, cot_J, cot_K, cot_L, cot_M, cot_N, cot_O, cot_P, cot_Q, cot_R, cot_S, cot_T, cot_U, cot_V, cot_W, cot_X, cot_Y, cot_Z, cot_AA, cot_AB, cot_AC, cot_AD, cot_AE, cot_AF);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CreateFile_New")]
+		public int CreateFile_New(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_C", DbType="NVarChar(255)")] string cot_C, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_D", DbType="NVarChar(255)")] string cot_D, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_E", DbType="NVarChar(255)")] string cot_E, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_F", DbType="NVarChar(255)")] string cot_F, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_H", DbType="NVarChar(255)")] string cot_H, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_I", DbType="NVarChar(255)")] string cot_I, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_J", DbType="NVarChar(255)")] string cot_J, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_K", DbType="NVarChar(255)")] string cot_K, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_L", DbType="NVarChar(255)")] string cot_L, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_M", DbType="NVarChar(255)")] string cot_M, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_N", DbType="NVarChar(255)")] string cot_N, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_O", DbType="NVarChar(255)")] string cot_O, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_P", DbType="NVarChar(255)")] string cot_P, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Q", DbType="NVarChar(255)")] string cot_Q, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_R", DbType="NVarChar(255)")] string cot_R, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_S", DbType="NVarChar(255)")] string cot_S, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_T", DbType="NVarChar(255)")] string cot_T, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_U", DbType="NVarChar(255)")] string cot_U, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_V", DbType="NVarChar(255)")] string cot_V, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_W", DbType="NVarChar(255)")] string cot_W, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_X", DbType="NVarChar(255)")] string cot_X, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Y", DbType="NVarChar(255)")] string cot_Y, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AA", DbType="NVarChar(255)")] string cot_AA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AB", DbType="NVarChar(255)")] string cot_AB, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AC", DbType="NVarChar(255)")] string cot_AC, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AD", DbType="NVarChar(255)")] string cot_AD, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AE", DbType="NVarChar(255)")] string cot_AE, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AF", DbType="NVarChar(255)")] string cot_AF, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AG", DbType="NVarChar(255)")] string cot_AG)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName, cot_C, cot_D, cot_E, cot_F, cot_G, cot_H, cot_I, cot_J, cot_K, cot_L, cot_M, cot_N, cot_O, cot_P, cot_Q, cot_R, cot_S, cot_T, cot_U, cot_V, cot_W, cot_X, cot_Y, cot_Z, cot_AA, cot_AB, cot_AC, cot_AD, cot_AE, cot_AF, cot_AG);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteData_Check")]
+		public int DeleteData_Check([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_G, cot_Z);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteData_De")]
+		public int DeleteData_De([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_G, cot_Z);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -389,6 +460,13 @@ namespace Nencho
 			return ((ISingleResult<GetBatchDivisionResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchNO_ExportExcel")]
+		public ISingleResult<GetBatchNO_ExportExcelResult> GetBatchNO_ExportExcel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string ngaybatdau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string ngayketthuc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ngaybatdau, ngayketthuc);
+			return ((ISingleResult<GetBatchNO_ExportExcelResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataAdmin")]
 		public ISingleResult<GetDataAdminResult> GetDataAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
 		{
@@ -403,11 +481,25 @@ namespace Nencho
 			return ((ISingleResult<GetDataAdminCompleteResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataChecker")]
+		public ISingleResult<GetDataCheckerResult> GetDataChecker([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
+			return ((ISingleResult<GetDataCheckerResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataChecker_TabAdmin")]
 		public ISingleResult<GetDataChecker_TabAdminResult> GetDataChecker_TabAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo);
 			return ((ISingleResult<GetDataChecker_TabAdminResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataCheckerComplete")]
+		public ISingleResult<GetDataCheckerCompleteResult> GetDataCheckerComplete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
+			return ((ISingleResult<GetDataCheckerCompleteResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataColumn36")]
@@ -429,6 +521,27 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<GetDataColumn38Result>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDE")]
+		public ISingleResult<GetDataDEResult> GetDataDE([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
+			return ((ISingleResult<GetDataDEResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDEComplete")]
+		public ISingleResult<GetDataDECompleteResult> GetDataDEComplete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
+			return ((ISingleResult<GetDataDECompleteResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDivision")]
+		public ISingleResult<GetDataDivisionResult> GetDataDivision([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo);
+			return ((ISingleResult<GetDataDivisionResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDivision_Load")]
@@ -501,6 +614,13 @@ namespace Nencho
 			return ((ISingleResult<GetTokenResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertAdmin")]
+		public int InsertAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idfile, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AG", DbType="NVarChar(255)")] string cot_AG)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName, username, idfile, cot_G, cot_Z, cot_AG);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InSertDataColumn36")]
 		public int InSertDataColumn36([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(500)")] string data)
 		{
@@ -519,6 +639,20 @@ namespace Nencho
 		public int InSertDataColumn38([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string dataColumn37, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(500)")] string dataColumn38)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dataColumn37, dataColumn38);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime")]
+		public int InsertLoginTime([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TimeLogin", DbType="DateTime")] System.Nullable<System.DateTime> timeLogin, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WindowUser", DbType="NVarChar(100)")] string windowUser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MachineName", DbType="NVarChar(100)")] string machineName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IPAddress", DbType="NVarChar(100)")] string iPAddress, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(100)")] string token)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, timeLogin, windowUser, machineName, iPAddress, token);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime_new")]
+		public int InsertLoginTime_new([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TimeLogin", DbType="DateTime")] System.Nullable<System.DateTime> timeLogin, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WindowUser", DbType="NVarChar(100)")] string windowUser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MachineName", DbType="NVarChar(100)")] string machineName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IPAddress", DbType="NVarChar(100)")] string iPAddress, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(100)")] string token, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string project)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, timeLogin, windowUser, machineName, iPAddress, token, project);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -557,6 +691,48 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NangSuatCheck1")]
+		public ISingleResult<NangSuatCheck1Result> NangSuatCheck1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuNgay", DbType="DateTime")] System.Nullable<System.DateTime> tuNgay, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenNgay", DbType="DateTime")] System.Nullable<System.DateTime> denNgay)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tuNgay, denNgay);
+			return ((ISingleResult<NangSuatCheck1Result>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NangSuatCheck2")]
+		public ISingleResult<NangSuatCheck2Result> NangSuatCheck2([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuNgay", DbType="DateTime")] System.Nullable<System.DateTime> tuNgay, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenNgay", DbType="DateTime")] System.Nullable<System.DateTime> denNgay)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tuNgay, denNgay);
+			return ((ISingleResult<NangSuatCheck2Result>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ResetToken")]
+		public int ResetToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(255)")] string token)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject, token);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RestoreTableAdmin")]
+		public int RestoreTableAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_53", DbType="NVarChar(255)")] string truong_53, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_54", DbType="NVarChar(255)")] string truong_54, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_55", DbType="NVarChar(255)")] string truong_55, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_56", DbType="NVarChar(255)")] string truong_56, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_60", DbType="NVarChar(255)")] string truong_60, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_61", DbType="NVarChar(255)")] string truong_61, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_62", DbType="NVarChar(255)")] string truong_62, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_63", DbType="NVarChar(255)")] string truong_63, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_67", DbType="NVarChar(255)")] string truong_67)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_G, cot_Z, truong_53, truong_54, truong_55, truong_56, truong_60, truong_61, truong_62, truong_63, truong_67);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeTienDo_Checker1")]
+		public ISingleResult<ThongKeTienDo_Checker1Result> ThongKeTienDo_Checker1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((ISingleResult<ThongKeTienDo_Checker1Result>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeTienDo_Checker2")]
+		public ISingleResult<ThongKeTienDo_Checker2Result> ThongKeTienDo_Checker2([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((ISingleResult<ThongKeTienDo_Checker2Result>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Update_TableAdmin")]
@@ -750,150 +926,6 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateToken_TableUser")]
-		public int UpdateToken_TableUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ToKen", DbType="NVarChar(200)")] string toKen)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, toKen);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDE")]
-		public ISingleResult<GetDataDEResult> GetDataDE([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
-			return ((ISingleResult<GetDataDEResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDEComplete")]
-		public ISingleResult<GetDataDECompleteResult> GetDataDEComplete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
-			return ((ISingleResult<GetDataDECompleteResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataDivision")]
-		public ISingleResult<GetDataDivisionResult> GetDataDivision([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo);
-			return ((ISingleResult<GetDataDivisionResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataChecker")]
-		public ISingleResult<GetDataCheckerResult> GetDataChecker([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
-			return ((ISingleResult<GetDataCheckerResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDataCheckerComplete")]
-		public ISingleResult<GetDataCheckerCompleteResult> GetDataCheckerComplete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="BatchNo", DbType="NVarChar(255)")] string batchNo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchNo, username);
-			return ((ISingleResult<GetDataCheckerCompleteResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteData_Check")]
-		public int DeleteData_Check([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_G, cot_Z);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteData_De")]
-		public int DeleteData_De([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_G, cot_Z);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RestoreTableAdmin")]
-		public int RestoreTableAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_53", DbType="NVarChar(255)")] string truong_53, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_54", DbType="NVarChar(255)")] string truong_54, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_55", DbType="NVarChar(255)")] string truong_55, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_56", DbType="NVarChar(255)")] string truong_56, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_60", DbType="NVarChar(255)")] string truong_60, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_61", DbType="NVarChar(255)")] string truong_61, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_62", DbType="NVarChar(255)")] string truong_62, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_63", DbType="NVarChar(255)")] string truong_63, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_67", DbType="NVarChar(255)")] string truong_67)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cot_G, cot_Z, truong_53, truong_54, truong_55, truong_56, truong_60, truong_61, truong_62, truong_63, truong_67);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CreateFile_New")]
-		public int CreateFile_New(
-					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_C", DbType="NVarChar(255)")] string cot_C, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_D", DbType="NVarChar(255)")] string cot_D, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_E", DbType="NVarChar(255)")] string cot_E, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_F", DbType="NVarChar(255)")] string cot_F, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_H", DbType="NVarChar(255)")] string cot_H, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_I", DbType="NVarChar(255)")] string cot_I, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_J", DbType="NVarChar(255)")] string cot_J, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_K", DbType="NVarChar(255)")] string cot_K, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_L", DbType="NVarChar(255)")] string cot_L, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_M", DbType="NVarChar(255)")] string cot_M, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_N", DbType="NVarChar(255)")] string cot_N, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_O", DbType="NVarChar(255)")] string cot_O, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_P", DbType="NVarChar(255)")] string cot_P, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Q", DbType="NVarChar(255)")] string cot_Q, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_R", DbType="NVarChar(255)")] string cot_R, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_S", DbType="NVarChar(255)")] string cot_S, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_T", DbType="NVarChar(255)")] string cot_T, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_U", DbType="NVarChar(255)")] string cot_U, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_V", DbType="NVarChar(255)")] string cot_V, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_W", DbType="NVarChar(255)")] string cot_W, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_X", DbType="NVarChar(255)")] string cot_X, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Y", DbType="NVarChar(255)")] string cot_Y, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AA", DbType="NVarChar(255)")] string cot_AA, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AB", DbType="NVarChar(255)")] string cot_AB, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AC", DbType="NVarChar(255)")] string cot_AC, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AD", DbType="NVarChar(255)")] string cot_AD, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AE", DbType="NVarChar(255)")] string cot_AE, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AF", DbType="NVarChar(255)")] string cot_AF, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AG", DbType="NVarChar(255)")] string cot_AG)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName, cot_C, cot_D, cot_E, cot_F, cot_G, cot_H, cot_I, cot_J, cot_K, cot_L, cot_M, cot_N, cot_O, cot_P, cot_Q, cot_R, cot_S, cot_T, cot_U, cot_V, cot_W, cot_X, cot_Y, cot_Z, cot_AA, cot_AB, cot_AC, cot_AD, cot_AE, cot_AF, cot_AG);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertAdmin")]
-		public int InsertAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string idfile, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_G", DbType="NVarChar(255)")] string cot_G, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_Z", DbType="NVarChar(255)")] string cot_Z, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cot_AG", DbType="NVarChar(255)")] string cot_AG)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName, username, idfile, cot_G, cot_Z, cot_AG);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatchNO_ExportExcel")]
-		public ISingleResult<GetBatchNO_ExportExcelResult> GetBatchNO_ExportExcel([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string ngaybatdau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string ngayketthuc)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ngaybatdau, ngayketthuc);
-			return ((ISingleResult<GetBatchNO_ExportExcelResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NangSuatCheck1")]
-		public ISingleResult<NangSuatCheck1Result> NangSuatCheck1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuNgay", DbType="DateTime")] System.Nullable<System.DateTime> tuNgay, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenNgay", DbType="DateTime")] System.Nullable<System.DateTime> denNgay)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tuNgay, denNgay);
-			return ((ISingleResult<NangSuatCheck1Result>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NangSuatCheck2")]
-		public ISingleResult<NangSuatCheck2Result> NangSuatCheck2([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuNgay", DbType="DateTime")] System.Nullable<System.DateTime> tuNgay, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenNgay", DbType="DateTime")] System.Nullable<System.DateTime> denNgay)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tuNgay, denNgay);
-			return ((ISingleResult<NangSuatCheck2Result>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateToken")]
-		public int updateToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string token)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject, token);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertLoginTime_new")]
-		public int InsertLoginTime_new([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TimeLogin", DbType="DateTime")] System.Nullable<System.DateTime> timeLogin, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WindowUser", DbType="NVarChar(100)")] string windowUser, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="MachineName", DbType="NVarChar(100)")] string machineName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IPAddress", DbType="NVarChar(100)")] string iPAddress, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(100)")] string token, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string project)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, timeLogin, windowUser, machineName, iPAddress, token, project);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateTimeLastRequest")]
 		public int UpdateTimeLastRequest([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(255)")] string token)
 		{
@@ -908,11 +940,39 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ResetToken")]
-		public int ResetToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Token", DbType="NVarChar(255)")] string token)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateToken")]
+		public int updateToken([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(150)")] string idproject, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string token)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, idproject, token);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateToken_TableUser")]
+		public int UpdateToken_TableUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ToKen", DbType="NVarChar(200)")] string toKen)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, toKen);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.UpdateUser")]
+		public int UpdateUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="NVarChar(200)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(200)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Idrole", DbType="NVarChar(200)")] string idrole, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nhanvien", DbType="NVarChar(200)")] string nhanvien)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, idrole, nhanvien);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XuatDuLieuDacBiet")]
+		public ISingleResult<XuatDuLieuDacBietResult> XuatDuLieuDacBiet([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName);
+			return ((ISingleResult<XuatDuLieuDacBietResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XuatDuLieuLichSu")]
+		public ISingleResult<XuatDuLieuLichSuResult> XuatDuLieuLichSu([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName);
+			return ((ISingleResult<XuatDuLieuLichSuResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -3142,31 +3202,18 @@ namespace Nencho
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_DataColumn36")]
-	public partial class tbl_DataColumn36 : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class tbl_DataColumn36
 	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
 		private string _dataColumn36;
 		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OndataColumn36Changing(string value);
-    partial void OndataColumn36Changed();
-    #endregion
-		
 		public tbl_DataColumn36()
 		{
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int id
 		{
 			get
@@ -3177,11 +3224,7 @@ namespace Nencho
 			{
 				if ((this._id != value))
 				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
 					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
 				}
 			}
 		}
@@ -3197,32 +3240,8 @@ namespace Nencho
 			{
 				if ((this._dataColumn36 != value))
 				{
-					this.OndataColumn36Changing(value);
-					this.SendPropertyChanging();
 					this._dataColumn36 = value;
-					this.SendPropertyChanged("dataColumn36");
-					this.OndataColumn36Changed();
 				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -3423,936 +3442,6 @@ namespace Nencho
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Input")]
-	public partial class tbl_Input : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private long _ID;
-		
-		private string _fBatchName;
-		
-		private string _UserName;
-		
-		private string _Truong_26;
-		
-		private string _Truong_27;
-		
-		private string _Truong_28;
-		
-		private string _Truong_29;
-		
-		private string _Truong_30;
-		
-		private string _Truong_31;
-		
-		private string _Truong_32;
-		
-		private string _Truong_33;
-		
-		private string _Truong_34;
-		
-		private string _Truong_35;
-		
-		private string _Truong_36;
-		
-		private string _Truong_37;
-		
-		private string _Truong_38;
-		
-		private string _Truong_39;
-		
-		private string _Truong_40;
-		
-		private string _Truong_41;
-		
-		private string _Truong_42;
-		
-		private string _Truong_43;
-		
-		private string _Truong_58;
-		
-		private string _Truong_59;
-		
-		private string _IDFile;
-		
-		private string _Cot_G;
-		
-		private string _Cot_Z;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(long value);
-    partial void OnIDChanged();
-    partial void OnfBatchNameChanging(string value);
-    partial void OnfBatchNameChanged();
-    partial void OnUserNameChanging(string value);
-    partial void OnUserNameChanged();
-    partial void OnTruong_26Changing(string value);
-    partial void OnTruong_26Changed();
-    partial void OnTruong_27Changing(string value);
-    partial void OnTruong_27Changed();
-    partial void OnTruong_28Changing(string value);
-    partial void OnTruong_28Changed();
-    partial void OnTruong_29Changing(string value);
-    partial void OnTruong_29Changed();
-    partial void OnTruong_30Changing(string value);
-    partial void OnTruong_30Changed();
-    partial void OnTruong_31Changing(string value);
-    partial void OnTruong_31Changed();
-    partial void OnTruong_32Changing(string value);
-    partial void OnTruong_32Changed();
-    partial void OnTruong_33Changing(string value);
-    partial void OnTruong_33Changed();
-    partial void OnTruong_34Changing(string value);
-    partial void OnTruong_34Changed();
-    partial void OnTruong_35Changing(string value);
-    partial void OnTruong_35Changed();
-    partial void OnTruong_36Changing(string value);
-    partial void OnTruong_36Changed();
-    partial void OnTruong_37Changing(string value);
-    partial void OnTruong_37Changed();
-    partial void OnTruong_38Changing(string value);
-    partial void OnTruong_38Changed();
-    partial void OnTruong_39Changing(string value);
-    partial void OnTruong_39Changed();
-    partial void OnTruong_40Changing(string value);
-    partial void OnTruong_40Changed();
-    partial void OnTruong_41Changing(string value);
-    partial void OnTruong_41Changed();
-    partial void OnTruong_42Changing(string value);
-    partial void OnTruong_42Changed();
-    partial void OnTruong_43Changing(string value);
-    partial void OnTruong_43Changed();
-    partial void OnTruong_58Changing(string value);
-    partial void OnTruong_58Changed();
-    partial void OnTruong_59Changing(string value);
-    partial void OnTruong_59Changed();
-    partial void OnIDFileChanging(string value);
-    partial void OnIDFileChanged();
-    partial void OnCot_GChanging(string value);
-    partial void OnCot_GChanged();
-    partial void OnCot_ZChanging(string value);
-    partial void OnCot_ZChanged();
-    #endregion
-		
-		public tbl_Input()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public long ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
-		public string fBatchName
-		{
-			get
-			{
-				return this._fBatchName;
-			}
-			set
-			{
-				if ((this._fBatchName != value))
-				{
-					this.OnfBatchNameChanging(value);
-					this.SendPropertyChanging();
-					this._fBatchName = value;
-					this.SendPropertyChanged("fBatchName");
-					this.OnfBatchNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this.OnUserNameChanging(value);
-					this.SendPropertyChanging();
-					this._UserName = value;
-					this.SendPropertyChanged("UserName");
-					this.OnUserNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
-		public string Truong_26
-		{
-			get
-			{
-				return this._Truong_26;
-			}
-			set
-			{
-				if ((this._Truong_26 != value))
-				{
-					this.OnTruong_26Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_26 = value;
-					this.SendPropertyChanged("Truong_26");
-					this.OnTruong_26Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
-		public string Truong_27
-		{
-			get
-			{
-				return this._Truong_27;
-			}
-			set
-			{
-				if ((this._Truong_27 != value))
-				{
-					this.OnTruong_27Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_27 = value;
-					this.SendPropertyChanged("Truong_27");
-					this.OnTruong_27Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
-		public string Truong_28
-		{
-			get
-			{
-				return this._Truong_28;
-			}
-			set
-			{
-				if ((this._Truong_28 != value))
-				{
-					this.OnTruong_28Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_28 = value;
-					this.SendPropertyChanged("Truong_28");
-					this.OnTruong_28Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
-		public string Truong_29
-		{
-			get
-			{
-				return this._Truong_29;
-			}
-			set
-			{
-				if ((this._Truong_29 != value))
-				{
-					this.OnTruong_29Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_29 = value;
-					this.SendPropertyChanged("Truong_29");
-					this.OnTruong_29Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
-		public string Truong_30
-		{
-			get
-			{
-				return this._Truong_30;
-			}
-			set
-			{
-				if ((this._Truong_30 != value))
-				{
-					this.OnTruong_30Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_30 = value;
-					this.SendPropertyChanged("Truong_30");
-					this.OnTruong_30Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
-		public string Truong_31
-		{
-			get
-			{
-				return this._Truong_31;
-			}
-			set
-			{
-				if ((this._Truong_31 != value))
-				{
-					this.OnTruong_31Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_31 = value;
-					this.SendPropertyChanged("Truong_31");
-					this.OnTruong_31Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
-		public string Truong_32
-		{
-			get
-			{
-				return this._Truong_32;
-			}
-			set
-			{
-				if ((this._Truong_32 != value))
-				{
-					this.OnTruong_32Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_32 = value;
-					this.SendPropertyChanged("Truong_32");
-					this.OnTruong_32Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
-		public string Truong_33
-		{
-			get
-			{
-				return this._Truong_33;
-			}
-			set
-			{
-				if ((this._Truong_33 != value))
-				{
-					this.OnTruong_33Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_33 = value;
-					this.SendPropertyChanged("Truong_33");
-					this.OnTruong_33Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
-		public string Truong_34
-		{
-			get
-			{
-				return this._Truong_34;
-			}
-			set
-			{
-				if ((this._Truong_34 != value))
-				{
-					this.OnTruong_34Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_34 = value;
-					this.SendPropertyChanged("Truong_34");
-					this.OnTruong_34Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
-		public string Truong_35
-		{
-			get
-			{
-				return this._Truong_35;
-			}
-			set
-			{
-				if ((this._Truong_35 != value))
-				{
-					this.OnTruong_35Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_35 = value;
-					this.SendPropertyChanged("Truong_35");
-					this.OnTruong_35Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
-		public string Truong_36
-		{
-			get
-			{
-				return this._Truong_36;
-			}
-			set
-			{
-				if ((this._Truong_36 != value))
-				{
-					this.OnTruong_36Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_36 = value;
-					this.SendPropertyChanged("Truong_36");
-					this.OnTruong_36Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
-		public string Truong_37
-		{
-			get
-			{
-				return this._Truong_37;
-			}
-			set
-			{
-				if ((this._Truong_37 != value))
-				{
-					this.OnTruong_37Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_37 = value;
-					this.SendPropertyChanged("Truong_37");
-					this.OnTruong_37Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
-		public string Truong_38
-		{
-			get
-			{
-				return this._Truong_38;
-			}
-			set
-			{
-				if ((this._Truong_38 != value))
-				{
-					this.OnTruong_38Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_38 = value;
-					this.SendPropertyChanged("Truong_38");
-					this.OnTruong_38Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
-		public string Truong_39
-		{
-			get
-			{
-				return this._Truong_39;
-			}
-			set
-			{
-				if ((this._Truong_39 != value))
-				{
-					this.OnTruong_39Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_39 = value;
-					this.SendPropertyChanged("Truong_39");
-					this.OnTruong_39Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
-		public string Truong_40
-		{
-			get
-			{
-				return this._Truong_40;
-			}
-			set
-			{
-				if ((this._Truong_40 != value))
-				{
-					this.OnTruong_40Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_40 = value;
-					this.SendPropertyChanged("Truong_40");
-					this.OnTruong_40Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
-		public string Truong_41
-		{
-			get
-			{
-				return this._Truong_41;
-			}
-			set
-			{
-				if ((this._Truong_41 != value))
-				{
-					this.OnTruong_41Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_41 = value;
-					this.SendPropertyChanged("Truong_41");
-					this.OnTruong_41Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
-		public string Truong_42
-		{
-			get
-			{
-				return this._Truong_42;
-			}
-			set
-			{
-				if ((this._Truong_42 != value))
-				{
-					this.OnTruong_42Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_42 = value;
-					this.SendPropertyChanged("Truong_42");
-					this.OnTruong_42Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
-		public string Truong_43
-		{
-			get
-			{
-				return this._Truong_43;
-			}
-			set
-			{
-				if ((this._Truong_43 != value))
-				{
-					this.OnTruong_43Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_43 = value;
-					this.SendPropertyChanged("Truong_43");
-					this.OnTruong_43Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_58", DbType="NVarChar(255)")]
-		public string Truong_58
-		{
-			get
-			{
-				return this._Truong_58;
-			}
-			set
-			{
-				if ((this._Truong_58 != value))
-				{
-					this.OnTruong_58Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_58 = value;
-					this.SendPropertyChanged("Truong_58");
-					this.OnTruong_58Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_59", DbType="NVarChar(255)")]
-		public string Truong_59
-		{
-			get
-			{
-				return this._Truong_59;
-			}
-			set
-			{
-				if ((this._Truong_59 != value))
-				{
-					this.OnTruong_59Changing(value);
-					this.SendPropertyChanging();
-					this._Truong_59 = value;
-					this.SendPropertyChanged("Truong_59");
-					this.OnTruong_59Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFile", DbType="NVarChar(255)")]
-		public string IDFile
-		{
-			get
-			{
-				return this._IDFile;
-			}
-			set
-			{
-				if ((this._IDFile != value))
-				{
-					this.OnIDFileChanging(value);
-					this.SendPropertyChanging();
-					this._IDFile = value;
-					this.SendPropertyChanged("IDFile");
-					this.OnIDFileChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
-		public string Cot_G
-		{
-			get
-			{
-				return this._Cot_G;
-			}
-			set
-			{
-				if ((this._Cot_G != value))
-				{
-					this.OnCot_GChanging(value);
-					this.SendPropertyChanging();
-					this._Cot_G = value;
-					this.SendPropertyChanged("Cot_G");
-					this.OnCot_GChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-			{
-				if ((this._Cot_Z != value))
-				{
-					this.OnCot_ZChanging(value);
-					this.SendPropertyChanging();
-					this._Cot_Z = value;
-					this.SendPropertyChanged("Cot_Z");
-					this.OnCot_ZChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Role")]
-	public partial class tbl_Role : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _IdRole;
-		
-		private string _RoleName;
-		
-		private string _GhiChu;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdRoleChanging(string value);
-    partial void OnIdRoleChanged();
-    partial void OnRoleNameChanging(string value);
-    partial void OnRoleNameChanged();
-    partial void OnGhiChuChanging(string value);
-    partial void OnGhiChuChanged();
-    #endregion
-		
-		public tbl_Role()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string IdRole
-		{
-			get
-			{
-				return this._IdRole;
-			}
-			set
-			{
-				if ((this._IdRole != value))
-				{
-					this.OnIdRoleChanging(value);
-					this.SendPropertyChanging();
-					this._IdRole = value;
-					this.SendPropertyChanged("IdRole");
-					this.OnIdRoleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="NVarChar(200)")]
-		public string RoleName
-		{
-			get
-			{
-				return this._RoleName;
-			}
-			set
-			{
-				if ((this._RoleName != value))
-				{
-					this.OnRoleNameChanging(value);
-					this.SendPropertyChanging();
-					this._RoleName = value;
-					this.SendPropertyChanged("RoleName");
-					this.OnRoleNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(200)")]
-		public string GhiChu
-		{
-			get
-			{
-				return this._GhiChu;
-			}
-			set
-			{
-				if ((this._GhiChu != value))
-				{
-					this.OnGhiChuChanging(value);
-					this.SendPropertyChanging();
-					this._GhiChu = value;
-					this.SendPropertyChanged("GhiChu");
-					this.OnGhiChuChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_User")]
-	public partial class tbl_User : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _UserName;
-		
-		private string _Password;
-		
-		private string _IdRole;
-		
-		private string _Nhanvien;
-		
-		private string _Token;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnUserNameChanging(string value);
-    partial void OnUserNameChanged();
-    partial void OnPasswordChanging(string value);
-    partial void OnPasswordChanged();
-    partial void OnIdRoleChanging(string value);
-    partial void OnIdRoleChanged();
-    partial void OnNhanvienChanging(string value);
-    partial void OnNhanvienChanged();
-    partial void OnTokenChanging(string value);
-    partial void OnTokenChanged();
-    #endregion
-		
-		public tbl_User()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this.OnUserNameChanging(value);
-					this.SendPropertyChanging();
-					this._UserName = value;
-					this.SendPropertyChanged("UserName");
-					this.OnUserNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(200)")]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this.OnPasswordChanging(value);
-					this.SendPropertyChanging();
-					this._Password = value;
-					this.SendPropertyChanged("Password");
-					this.OnPasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200)")]
-		public string IdRole
-		{
-			get
-			{
-				return this._IdRole;
-			}
-			set
-			{
-				if ((this._IdRole != value))
-				{
-					this.OnIdRoleChanging(value);
-					this.SendPropertyChanging();
-					this._IdRole = value;
-					this.SendPropertyChanged("IdRole");
-					this.OnIdRoleChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
-		public string Nhanvien
-		{
-			get
-			{
-				return this._Nhanvien;
-			}
-			set
-			{
-				if ((this._Nhanvien != value))
-				{
-					this.OnNhanvienChanging(value);
-					this.SendPropertyChanging();
-					this._Nhanvien = value;
-					this.SendPropertyChanged("Nhanvien");
-					this.OnNhanvienChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Token", DbType="NVarChar(200)")]
-		public string Token
-		{
-			get
-			{
-				return this._Token;
-			}
-			set
-			{
-				if ((this._Token != value))
-				{
-					this.OnTokenChanging(value);
-					this.SendPropertyChanging();
-					this._Token = value;
-					this.SendPropertyChanged("Token");
-					this.OnTokenChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_File")]
 	public partial class tbl_File : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4469,6 +3558,10 @@ namespace Nencho
 		
 		private System.Nullable<System.DateTime> _Date_SubmitFile_Check_2;
 		
+		private string _TienDoCheck1;
+		
+		private string _TienDoCheck2;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4583,6 +3676,10 @@ namespace Nencho
     partial void OnSubmitFile_Check_2Changed();
     partial void OnDate_SubmitFile_Check_2Changing(System.Nullable<System.DateTime> value);
     partial void OnDate_SubmitFile_Check_2Changed();
+    partial void OnTienDoCheck1Changing(string value);
+    partial void OnTienDoCheck1Changed();
+    partial void OnTienDoCheck2Changing(string value);
+    partial void OnTienDoCheck2Changed();
     #endregion
 		
 		public tbl_File()
@@ -5690,6 +4787,708 @@ namespace Nencho
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TienDoCheck1", DbType="NVarChar(255)")]
+		public string TienDoCheck1
+		{
+			get
+			{
+				return this._TienDoCheck1;
+			}
+			set
+			{
+				if ((this._TienDoCheck1 != value))
+				{
+					this.OnTienDoCheck1Changing(value);
+					this.SendPropertyChanging();
+					this._TienDoCheck1 = value;
+					this.SendPropertyChanged("TienDoCheck1");
+					this.OnTienDoCheck1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TienDoCheck2", DbType="NVarChar(255)")]
+		public string TienDoCheck2
+		{
+			get
+			{
+				return this._TienDoCheck2;
+			}
+			set
+			{
+				if ((this._TienDoCheck2 != value))
+				{
+					this.OnTienDoCheck2Changing(value);
+					this.SendPropertyChanging();
+					this._TienDoCheck2 = value;
+					this.SendPropertyChanged("TienDoCheck2");
+					this.OnTienDoCheck2Changed();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Input")]
+	public partial class tbl_Input : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _ID;
+		
+		private string _fBatchName;
+		
+		private string _UserName;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		private string _Truong_58;
+		
+		private string _Truong_59;
+		
+		private string _IDFile;
+		
+		private string _Cot_G;
+		
+		private string _Cot_Z;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(long value);
+    partial void OnIDChanged();
+    partial void OnfBatchNameChanging(string value);
+    partial void OnfBatchNameChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnTruong_26Changing(string value);
+    partial void OnTruong_26Changed();
+    partial void OnTruong_27Changing(string value);
+    partial void OnTruong_27Changed();
+    partial void OnTruong_28Changing(string value);
+    partial void OnTruong_28Changed();
+    partial void OnTruong_29Changing(string value);
+    partial void OnTruong_29Changed();
+    partial void OnTruong_30Changing(string value);
+    partial void OnTruong_30Changed();
+    partial void OnTruong_31Changing(string value);
+    partial void OnTruong_31Changed();
+    partial void OnTruong_32Changing(string value);
+    partial void OnTruong_32Changed();
+    partial void OnTruong_33Changing(string value);
+    partial void OnTruong_33Changed();
+    partial void OnTruong_34Changing(string value);
+    partial void OnTruong_34Changed();
+    partial void OnTruong_35Changing(string value);
+    partial void OnTruong_35Changed();
+    partial void OnTruong_36Changing(string value);
+    partial void OnTruong_36Changed();
+    partial void OnTruong_37Changing(string value);
+    partial void OnTruong_37Changed();
+    partial void OnTruong_38Changing(string value);
+    partial void OnTruong_38Changed();
+    partial void OnTruong_39Changing(string value);
+    partial void OnTruong_39Changed();
+    partial void OnTruong_40Changing(string value);
+    partial void OnTruong_40Changed();
+    partial void OnTruong_41Changing(string value);
+    partial void OnTruong_41Changed();
+    partial void OnTruong_42Changing(string value);
+    partial void OnTruong_42Changed();
+    partial void OnTruong_43Changing(string value);
+    partial void OnTruong_43Changed();
+    partial void OnTruong_58Changing(string value);
+    partial void OnTruong_58Changed();
+    partial void OnTruong_59Changing(string value);
+    partial void OnTruong_59Changed();
+    partial void OnIDFileChanging(string value);
+    partial void OnIDFileChanged();
+    partial void OnCot_GChanging(string value);
+    partial void OnCot_GChanged();
+    partial void OnCot_ZChanging(string value);
+    partial void OnCot_ZChanged();
+    #endregion
+		
+		public tbl_Input()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(255)")]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this.OnfBatchNameChanging(value);
+					this.SendPropertyChanging();
+					this._fBatchName = value;
+					this.SendPropertyChanged("fBatchName");
+					this.OnfBatchNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this.OnTruong_26Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_26 = value;
+					this.SendPropertyChanged("Truong_26");
+					this.OnTruong_26Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this.OnTruong_27Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_27 = value;
+					this.SendPropertyChanged("Truong_27");
+					this.OnTruong_27Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this.OnTruong_28Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_28 = value;
+					this.SendPropertyChanged("Truong_28");
+					this.OnTruong_28Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this.OnTruong_29Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_29 = value;
+					this.SendPropertyChanged("Truong_29");
+					this.OnTruong_29Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this.OnTruong_30Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_30 = value;
+					this.SendPropertyChanged("Truong_30");
+					this.OnTruong_30Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this.OnTruong_31Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_31 = value;
+					this.SendPropertyChanged("Truong_31");
+					this.OnTruong_31Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this.OnTruong_32Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_32 = value;
+					this.SendPropertyChanged("Truong_32");
+					this.OnTruong_32Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this.OnTruong_33Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_33 = value;
+					this.SendPropertyChanged("Truong_33");
+					this.OnTruong_33Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this.OnTruong_34Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_34 = value;
+					this.SendPropertyChanged("Truong_34");
+					this.OnTruong_34Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this.OnTruong_35Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_35 = value;
+					this.SendPropertyChanged("Truong_35");
+					this.OnTruong_35Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this.OnTruong_36Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_36 = value;
+					this.SendPropertyChanged("Truong_36");
+					this.OnTruong_36Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this.OnTruong_37Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_37 = value;
+					this.SendPropertyChanged("Truong_37");
+					this.OnTruong_37Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this.OnTruong_38Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_38 = value;
+					this.SendPropertyChanged("Truong_38");
+					this.OnTruong_38Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this.OnTruong_39Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_39 = value;
+					this.SendPropertyChanged("Truong_39");
+					this.OnTruong_39Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this.OnTruong_40Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_40 = value;
+					this.SendPropertyChanged("Truong_40");
+					this.OnTruong_40Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this.OnTruong_41Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_41 = value;
+					this.SendPropertyChanged("Truong_41");
+					this.OnTruong_41Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this.OnTruong_42Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_42 = value;
+					this.SendPropertyChanged("Truong_42");
+					this.OnTruong_42Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this.OnTruong_43Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_43 = value;
+					this.SendPropertyChanged("Truong_43");
+					this.OnTruong_43Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_58", DbType="NVarChar(255)")]
+		public string Truong_58
+		{
+			get
+			{
+				return this._Truong_58;
+			}
+			set
+			{
+				if ((this._Truong_58 != value))
+				{
+					this.OnTruong_58Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_58 = value;
+					this.SendPropertyChanged("Truong_58");
+					this.OnTruong_58Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_59", DbType="NVarChar(255)")]
+		public string Truong_59
+		{
+			get
+			{
+				return this._Truong_59;
+			}
+			set
+			{
+				if ((this._Truong_59 != value))
+				{
+					this.OnTruong_59Changing(value);
+					this.SendPropertyChanging();
+					this._Truong_59 = value;
+					this.SendPropertyChanged("Truong_59");
+					this.OnTruong_59Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFile", DbType="NVarChar(255)")]
+		public string IDFile
+		{
+			get
+			{
+				return this._IDFile;
+			}
+			set
+			{
+				if ((this._IDFile != value))
+				{
+					this.OnIDFileChanging(value);
+					this.SendPropertyChanging();
+					this._IDFile = value;
+					this.SendPropertyChanged("IDFile");
+					this.OnIDFileChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this.OnCot_GChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_G = value;
+					this.SendPropertyChanged("Cot_G");
+					this.OnCot_GChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this.OnCot_ZChanging(value);
+					this.SendPropertyChanging();
+					this._Cot_Z = value;
+					this.SendPropertyChanged("Cot_Z");
+					this.OnCot_ZChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -5721,7 +5520,11 @@ namespace Nencho
 		
 		private System.Nullable<System.DateTime> _TimeLogout;
 		
-		private System.Nullable<System.DateTime> _TimeBlog;
+		private System.Nullable<int> _TimeBlog;
+		
+		private System.Nullable<int> _TimeFree;
+		
+		private System.Nullable<System.DateTime> _LastRequest;
 		
 		private string _MachineName;
 		
@@ -5730,6 +5533,8 @@ namespace Nencho
 		private string _IpAddress;
 		
 		private string _Token;
+		
+		private string _Project;
 		
 		public tbl_LoginTime()
 		{
@@ -5783,8 +5588,8 @@ namespace Nencho
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeBlog", DbType="DateTime")]
-		public System.Nullable<System.DateTime> TimeBlog
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeBlog", DbType="Int")]
+		public System.Nullable<int> TimeBlog
 		{
 			get
 			{
@@ -5795,6 +5600,38 @@ namespace Nencho
 				if ((this._TimeBlog != value))
 				{
 					this._TimeBlog = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeFree", DbType="Int")]
+		public System.Nullable<int> TimeFree
+		{
+			get
+			{
+				return this._TimeFree;
+			}
+			set
+			{
+				if ((this._TimeFree != value))
+				{
+					this._TimeFree = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastRequest", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastRequest
+		{
+			get
+			{
+				return this._LastRequest;
+			}
+			set
+			{
+				if ((this._LastRequest != value))
+				{
+					this._LastRequest = value;
 				}
 			}
 		}
@@ -5860,6 +5697,132 @@ namespace Nencho
 				{
 					this._Token = value;
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Project", DbType="NVarChar(200)")]
+		public string Project
+		{
+			get
+			{
+				return this._Project;
+			}
+			set
+			{
+				if ((this._Project != value))
+				{
+					this._Project = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Role")]
+	public partial class tbl_Role : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _IdRole;
+		
+		private string _RoleName;
+		
+		private string _GhiChu;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdRoleChanging(string value);
+    partial void OnIdRoleChanged();
+    partial void OnRoleNameChanging(string value);
+    partial void OnRoleNameChanged();
+    partial void OnGhiChuChanging(string value);
+    partial void OnGhiChuChanged();
+    #endregion
+		
+		public tbl_Role()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string IdRole
+		{
+			get
+			{
+				return this._IdRole;
+			}
+			set
+			{
+				if ((this._IdRole != value))
+				{
+					this.OnIdRoleChanging(value);
+					this.SendPropertyChanging();
+					this._IdRole = value;
+					this.SendPropertyChanged("IdRole");
+					this.OnIdRoleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleName", DbType="NVarChar(200)")]
+		public string RoleName
+		{
+			get
+			{
+				return this._RoleName;
+			}
+			set
+			{
+				if ((this._RoleName != value))
+				{
+					this.OnRoleNameChanging(value);
+					this.SendPropertyChanging();
+					this._RoleName = value;
+					this.SendPropertyChanged("RoleName");
+					this.OnRoleNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(200)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this.OnGhiChuChanging(value);
+					this.SendPropertyChanging();
+					this._GhiChu = value;
+					this.SendPropertyChanged("GhiChu");
+					this.OnGhiChuChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -6018,6 +5981,1438 @@ namespace Nencho
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_User")]
+	public partial class tbl_User : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _UserName;
+		
+		private string _Password;
+		
+		private string _IdRole;
+		
+		private string _Nhanvien;
+		
+		private string _Token;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnIdRoleChanging(string value);
+    partial void OnIdRoleChanged();
+    partial void OnNhanvienChanging(string value);
+    partial void OnNhanvienChanged();
+    partial void OnTokenChanging(string value);
+    partial void OnTokenChanged();
+    #endregion
+		
+		public tbl_User()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(200) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(200)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRole", DbType="NVarChar(200)")]
+		public string IdRole
+		{
+			get
+			{
+				return this._IdRole;
+			}
+			set
+			{
+				if ((this._IdRole != value))
+				{
+					this.OnIdRoleChanging(value);
+					this.SendPropertyChanging();
+					this._IdRole = value;
+					this.SendPropertyChanged("IdRole");
+					this.OnIdRoleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
+		public string Nhanvien
+		{
+			get
+			{
+				return this._Nhanvien;
+			}
+			set
+			{
+				if ((this._Nhanvien != value))
+				{
+					this.OnNhanvienChanging(value);
+					this.SendPropertyChanging();
+					this._Nhanvien = value;
+					this.SendPropertyChanged("Nhanvien");
+					this.OnNhanvienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Token", DbType="NVarChar(200)")]
+		public string Token
+		{
+			get
+			{
+				return this._Token;
+			}
+			set
+			{
+				if ((this._Token != value))
+				{
+					this.OnTokenChanging(value);
+					this.SendPropertyChanging();
+					this._Token = value;
+					this.SendPropertyChanged("Token");
+					this.OnTokenChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class XuatDuLieuTongResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Cot_J;
+		
+		private string _Cot_K;
+		
+		private string _Cot_M;
+		
+		private string _Cot_N;
+		
+		private string _Cot_O;
+		
+		private string _Cot_P;
+		
+		private string _Cot_Q;
+		
+		private string _Cot_R;
+		
+		private string _Cot_S;
+		
+		private string _Cot_T;
+		
+		private string _Cot_U;
+		
+		private string _Cot_X;
+		
+		private System.Nullable<System.DateTime> _DateCreate;
+		
+		private string _Cot_Y;
+		
+		private string _Cot_V;
+		
+		private string _Cot_Z;
+		
+		private string _Cot_AA;
+		
+		private string _Cot_AB;
+		
+		private string _Cot_AE;
+		
+		private string _Cot_AA1;
+		
+		private string _Cot_AC;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		private string _Cot_AB1;
+		
+		private string _Cot_AD;
+		
+		private string _Truong_391;
+		
+		private string _Truong_401;
+		
+		private string _Truong_411;
+		
+		private string _Truong_421;
+		
+		private string _Truong_431;
+		
+		private string _Cot_AE1;
+		
+		private string _Cot_AF;
+		
+		private string _Truong_51;
+		
+		private string _Truong_52;
+		
+		private string _Truong_53;
+		
+		private string _Truong_55;
+		
+		private string _Truong_551;
+		
+		private string _Truong_56;
+		
+		private string _Truong_57;
+		
+		private string _Truong_58;
+		
+		private string _Truong_59;
+		
+		private string _Truong_60;
+		
+		private string _Truong_61;
+		
+		private string _Truong_62;
+		
+		private string _Truong_63;
+		
+		private string _Truong_64;
+		
+		private string _Truong_65;
+		
+		private string _Truong_66;
+		
+		private string _Truong_67;
+		
+		private string _Truong_68;
+		
+		private string _Truong_69;
+		
+		private string _Truong_70;
+		
+		private string _Truong_71;
+		
+		private string _Truong_72;
+		
+		private string _Truong_73;
+		
+		private string _Truong_74;
+		
+		public XuatDuLieuTongResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_J", DbType="NVarChar(255)")]
+		public string Cot_J
+		{
+			get
+			{
+				return this._Cot_J;
+			}
+			set
+			{
+				if ((this._Cot_J != value))
+				{
+					this._Cot_J = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_K", DbType="NVarChar(255)")]
+		public string Cot_K
+		{
+			get
+			{
+				return this._Cot_K;
+			}
+			set
+			{
+				if ((this._Cot_K != value))
+				{
+					this._Cot_K = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_M", DbType="NVarChar(255)")]
+		public string Cot_M
+		{
+			get
+			{
+				return this._Cot_M;
+			}
+			set
+			{
+				if ((this._Cot_M != value))
+				{
+					this._Cot_M = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_N", DbType="NVarChar(255)")]
+		public string Cot_N
+		{
+			get
+			{
+				return this._Cot_N;
+			}
+			set
+			{
+				if ((this._Cot_N != value))
+				{
+					this._Cot_N = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_O", DbType="NVarChar(255)")]
+		public string Cot_O
+		{
+			get
+			{
+				return this._Cot_O;
+			}
+			set
+			{
+				if ((this._Cot_O != value))
+				{
+					this._Cot_O = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_P", DbType="NVarChar(255)")]
+		public string Cot_P
+		{
+			get
+			{
+				return this._Cot_P;
+			}
+			set
+			{
+				if ((this._Cot_P != value))
+				{
+					this._Cot_P = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Q", DbType="NVarChar(255)")]
+		public string Cot_Q
+		{
+			get
+			{
+				return this._Cot_Q;
+			}
+			set
+			{
+				if ((this._Cot_Q != value))
+				{
+					this._Cot_Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_R", DbType="NVarChar(255)")]
+		public string Cot_R
+		{
+			get
+			{
+				return this._Cot_R;
+			}
+			set
+			{
+				if ((this._Cot_R != value))
+				{
+					this._Cot_R = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_S", DbType="NVarChar(255)")]
+		public string Cot_S
+		{
+			get
+			{
+				return this._Cot_S;
+			}
+			set
+			{
+				if ((this._Cot_S != value))
+				{
+					this._Cot_S = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_T", DbType="NVarChar(255)")]
+		public string Cot_T
+		{
+			get
+			{
+				return this._Cot_T;
+			}
+			set
+			{
+				if ((this._Cot_T != value))
+				{
+					this._Cot_T = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_U", DbType="NVarChar(255)")]
+		public string Cot_U
+		{
+			get
+			{
+				return this._Cot_U;
+			}
+			set
+			{
+				if ((this._Cot_U != value))
+				{
+					this._Cot_U = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_X", DbType="NVarChar(255)")]
+		public string Cot_X
+		{
+			get
+			{
+				return this._Cot_X;
+			}
+			set
+			{
+				if ((this._Cot_X != value))
+				{
+					this._Cot_X = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreate
+		{
+			get
+			{
+				return this._DateCreate;
+			}
+			set
+			{
+				if ((this._DateCreate != value))
+				{
+					this._DateCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Y", DbType="NVarChar(255)")]
+		public string Cot_Y
+		{
+			get
+			{
+				return this._Cot_Y;
+			}
+			set
+			{
+				if ((this._Cot_Y != value))
+				{
+					this._Cot_Y = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_V", DbType="NVarChar(255)")]
+		public string Cot_V
+		{
+			get
+			{
+				return this._Cot_V;
+			}
+			set
+			{
+				if ((this._Cot_V != value))
+				{
+					this._Cot_V = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AA", DbType="NVarChar(255)")]
+		public string Cot_AA
+		{
+			get
+			{
+				return this._Cot_AA;
+			}
+			set
+			{
+				if ((this._Cot_AA != value))
+				{
+					this._Cot_AA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AB", DbType="NVarChar(255)")]
+		public string Cot_AB
+		{
+			get
+			{
+				return this._Cot_AB;
+			}
+			set
+			{
+				if ((this._Cot_AB != value))
+				{
+					this._Cot_AB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AE", DbType="NVarChar(255)")]
+		public string Cot_AE
+		{
+			get
+			{
+				return this._Cot_AE;
+			}
+			set
+			{
+				if ((this._Cot_AE != value))
+				{
+					this._Cot_AE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AA1", DbType="NVarChar(255)")]
+		public string Cot_AA1
+		{
+			get
+			{
+				return this._Cot_AA1;
+			}
+			set
+			{
+				if ((this._Cot_AA1 != value))
+				{
+					this._Cot_AA1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AC", DbType="NVarChar(255)")]
+		public string Cot_AC
+		{
+			get
+			{
+				return this._Cot_AC;
+			}
+			set
+			{
+				if ((this._Cot_AC != value))
+				{
+					this._Cot_AC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this._Truong_39 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this._Truong_40 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this._Truong_41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this._Truong_42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this._Truong_43 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AB1", DbType="NVarChar(255)")]
+		public string Cot_AB1
+		{
+			get
+			{
+				return this._Cot_AB1;
+			}
+			set
+			{
+				if ((this._Cot_AB1 != value))
+				{
+					this._Cot_AB1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AD", DbType="NVarChar(255)")]
+		public string Cot_AD
+		{
+			get
+			{
+				return this._Cot_AD;
+			}
+			set
+			{
+				if ((this._Cot_AD != value))
+				{
+					this._Cot_AD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_391", DbType="NVarChar(255)")]
+		public string Truong_391
+		{
+			get
+			{
+				return this._Truong_391;
+			}
+			set
+			{
+				if ((this._Truong_391 != value))
+				{
+					this._Truong_391 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_401", DbType="NVarChar(255)")]
+		public string Truong_401
+		{
+			get
+			{
+				return this._Truong_401;
+			}
+			set
+			{
+				if ((this._Truong_401 != value))
+				{
+					this._Truong_401 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_411", DbType="NVarChar(255)")]
+		public string Truong_411
+		{
+			get
+			{
+				return this._Truong_411;
+			}
+			set
+			{
+				if ((this._Truong_411 != value))
+				{
+					this._Truong_411 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_421", DbType="NVarChar(255)")]
+		public string Truong_421
+		{
+			get
+			{
+				return this._Truong_421;
+			}
+			set
+			{
+				if ((this._Truong_421 != value))
+				{
+					this._Truong_421 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_431", DbType="NVarChar(255)")]
+		public string Truong_431
+		{
+			get
+			{
+				return this._Truong_431;
+			}
+			set
+			{
+				if ((this._Truong_431 != value))
+				{
+					this._Truong_431 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AE1", DbType="NVarChar(255)")]
+		public string Cot_AE1
+		{
+			get
+			{
+				return this._Cot_AE1;
+			}
+			set
+			{
+				if ((this._Cot_AE1 != value))
+				{
+					this._Cot_AE1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AF", DbType="NVarChar(255)")]
+		public string Cot_AF
+		{
+			get
+			{
+				return this._Cot_AF;
+			}
+			set
+			{
+				if ((this._Cot_AF != value))
+				{
+					this._Cot_AF = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_51", DbType="NVarChar(255)")]
+		public string Truong_51
+		{
+			get
+			{
+				return this._Truong_51;
+			}
+			set
+			{
+				if ((this._Truong_51 != value))
+				{
+					this._Truong_51 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_52", DbType="NVarChar(255)")]
+		public string Truong_52
+		{
+			get
+			{
+				return this._Truong_52;
+			}
+			set
+			{
+				if ((this._Truong_52 != value))
+				{
+					this._Truong_52 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_53", DbType="NVarChar(255)")]
+		public string Truong_53
+		{
+			get
+			{
+				return this._Truong_53;
+			}
+			set
+			{
+				if ((this._Truong_53 != value))
+				{
+					this._Truong_53 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_55", DbType="NVarChar(255)")]
+		public string Truong_55
+		{
+			get
+			{
+				return this._Truong_55;
+			}
+			set
+			{
+				if ((this._Truong_55 != value))
+				{
+					this._Truong_55 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_551", DbType="NVarChar(255)")]
+		public string Truong_551
+		{
+			get
+			{
+				return this._Truong_551;
+			}
+			set
+			{
+				if ((this._Truong_551 != value))
+				{
+					this._Truong_551 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_56", DbType="NVarChar(255)")]
+		public string Truong_56
+		{
+			get
+			{
+				return this._Truong_56;
+			}
+			set
+			{
+				if ((this._Truong_56 != value))
+				{
+					this._Truong_56 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_57", DbType="NVarChar(255)")]
+		public string Truong_57
+		{
+			get
+			{
+				return this._Truong_57;
+			}
+			set
+			{
+				if ((this._Truong_57 != value))
+				{
+					this._Truong_57 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_58", DbType="NVarChar(255)")]
+		public string Truong_58
+		{
+			get
+			{
+				return this._Truong_58;
+			}
+			set
+			{
+				if ((this._Truong_58 != value))
+				{
+					this._Truong_58 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_59", DbType="NVarChar(255)")]
+		public string Truong_59
+		{
+			get
+			{
+				return this._Truong_59;
+			}
+			set
+			{
+				if ((this._Truong_59 != value))
+				{
+					this._Truong_59 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_60", DbType="NVarChar(255)")]
+		public string Truong_60
+		{
+			get
+			{
+				return this._Truong_60;
+			}
+			set
+			{
+				if ((this._Truong_60 != value))
+				{
+					this._Truong_60 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_61", DbType="NVarChar(255)")]
+		public string Truong_61
+		{
+			get
+			{
+				return this._Truong_61;
+			}
+			set
+			{
+				if ((this._Truong_61 != value))
+				{
+					this._Truong_61 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_62", DbType="NVarChar(255)")]
+		public string Truong_62
+		{
+			get
+			{
+				return this._Truong_62;
+			}
+			set
+			{
+				if ((this._Truong_62 != value))
+				{
+					this._Truong_62 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_63", DbType="NVarChar(255)")]
+		public string Truong_63
+		{
+			get
+			{
+				return this._Truong_63;
+			}
+			set
+			{
+				if ((this._Truong_63 != value))
+				{
+					this._Truong_63 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_64", DbType="NVarChar(255)")]
+		public string Truong_64
+		{
+			get
+			{
+				return this._Truong_64;
+			}
+			set
+			{
+				if ((this._Truong_64 != value))
+				{
+					this._Truong_64 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_65", DbType="NVarChar(255)")]
+		public string Truong_65
+		{
+			get
+			{
+				return this._Truong_65;
+			}
+			set
+			{
+				if ((this._Truong_65 != value))
+				{
+					this._Truong_65 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_66", DbType="NVarChar(255)")]
+		public string Truong_66
+		{
+			get
+			{
+				return this._Truong_66;
+			}
+			set
+			{
+				if ((this._Truong_66 != value))
+				{
+					this._Truong_66 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_67", DbType="NVarChar(255)")]
+		public string Truong_67
+		{
+			get
+			{
+				return this._Truong_67;
+			}
+			set
+			{
+				if ((this._Truong_67 != value))
+				{
+					this._Truong_67 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_68", DbType="NVarChar(255)")]
+		public string Truong_68
+		{
+			get
+			{
+				return this._Truong_68;
+			}
+			set
+			{
+				if ((this._Truong_68 != value))
+				{
+					this._Truong_68 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_69", DbType="NVarChar(255)")]
+		public string Truong_69
+		{
+			get
+			{
+				return this._Truong_69;
+			}
+			set
+			{
+				if ((this._Truong_69 != value))
+				{
+					this._Truong_69 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_70", DbType="NVarChar(255)")]
+		public string Truong_70
+		{
+			get
+			{
+				return this._Truong_70;
+			}
+			set
+			{
+				if ((this._Truong_70 != value))
+				{
+					this._Truong_70 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_71", DbType="NVarChar(255)")]
+		public string Truong_71
+		{
+			get
+			{
+				return this._Truong_71;
+			}
+			set
+			{
+				if ((this._Truong_71 != value))
+				{
+					this._Truong_71 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_72", DbType="NVarChar(255)")]
+		public string Truong_72
+		{
+			get
+			{
+				return this._Truong_72;
+			}
+			set
+			{
+				if ((this._Truong_72 != value))
+				{
+					this._Truong_72 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_73", DbType="NVarChar(255)")]
+		public string Truong_73
+		{
+			get
+			{
+				return this._Truong_73;
+			}
+			set
+			{
+				if ((this._Truong_73 != value))
+				{
+					this._Truong_73 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_74", DbType="NVarChar(255)")]
+		public string Truong_74
+		{
+			get
+			{
+				return this._Truong_74;
+			}
+			set
+			{
+				if ((this._Truong_74 != value))
+				{
+					this._Truong_74 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTietTienDo_Checker1Result
+	{
+		
+		private string _Cot_G;
+		
+		private string _Cot_Z;
+		
+		private string _UserName;
+		
+		private string _ThongTin;
+		
+		public ChiTietTienDo_Checker1Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="NVarChar(255)")]
+		public string ThongTin
+		{
+			get
+			{
+				return this._ThongTin;
+			}
+			set
+			{
+				if ((this._ThongTin != value))
+				{
+					this._ThongTin = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTietTienDo_Checker2Result
+	{
+		
+		private string _Cot_G;
+		
+		private string _Cot_Z;
+		
+		private string _UserName;
+		
+		private string _ThongTin;
+		
+		public ChiTietTienDo_Checker2Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="NVarChar(255)")]
+		public string ThongTin
+		{
+			get
+			{
+				return this._ThongTin;
+			}
+			set
+			{
+				if ((this._ThongTin != value))
+				{
+					this._ThongTin = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTietUser_Checker1Result
+	{
+		
+		private string _UserName;
+		
+		public ChiTietUser_Checker1Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
 			}
 		}
 	}
@@ -6236,6 +7631,32 @@ namespace Nencho
 		private string _Cot_Z;
 		
 		public GetBatchDivisionResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatchNO_ExportExcelResult
+	{
+		
+		private string _Cot_Z;
+		
+		public GetBatchNO_ExportExcelResult()
 		{
 		}
 		
@@ -7028,6 +8449,356 @@ namespace Nencho
 		}
 	}
 	
+	public partial class GetDataCheckerResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		public GetDataCheckerResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this._Truong_26 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this._Truong_27 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this._Truong_28 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this._Truong_29 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this._Truong_30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this._Truong_31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this._Truong_32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this._Truong_33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this._Truong_34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this._Truong_35 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this._Truong_36 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this._Truong_37 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this._Truong_38 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this._Truong_39 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this._Truong_40 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this._Truong_41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this._Truong_42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this._Truong_43 = value;
+				}
+			}
+		}
+	}
+	
 	public partial class GetDataChecker_TabAdminResult
 	{
 		
@@ -7288,6 +9059,356 @@ namespace Nencho
 		}
 	}
 	
+	public partial class GetDataCheckerCompleteResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		public GetDataCheckerCompleteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this._Truong_26 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this._Truong_27 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this._Truong_28 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this._Truong_29 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this._Truong_30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this._Truong_31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this._Truong_32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this._Truong_33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this._Truong_34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this._Truong_35 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this._Truong_36 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this._Truong_37 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this._Truong_38 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this._Truong_39 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this._Truong_40 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this._Truong_41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this._Truong_42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this._Truong_43 = value;
+				}
+			}
+		}
+	}
+	
 	public partial class GetDataColumn36Result
 	{
 		
@@ -7433,6 +9554,1146 @@ namespace Nencho
 				if ((this._dataColumn38 != value))
 				{
 					this._dataColumn38 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDataDEResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		public GetDataDEResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this._Truong_26 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this._Truong_27 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this._Truong_28 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this._Truong_29 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this._Truong_30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this._Truong_31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this._Truong_32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this._Truong_33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this._Truong_34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this._Truong_35 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this._Truong_36 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this._Truong_37 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this._Truong_38 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this._Truong_39 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this._Truong_40 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this._Truong_41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this._Truong_42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this._Truong_43 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDataDECompleteResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		private string _Truong_39;
+		
+		private string _Truong_40;
+		
+		private string _Truong_41;
+		
+		private string _Truong_42;
+		
+		private string _Truong_43;
+		
+		public GetDataDECompleteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this._Truong_26 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this._Truong_27 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this._Truong_28 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this._Truong_29 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this._Truong_30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this._Truong_31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this._Truong_32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this._Truong_33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this._Truong_34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this._Truong_35 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this._Truong_36 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this._Truong_37 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this._Truong_38 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
+		public string Truong_39
+		{
+			get
+			{
+				return this._Truong_39;
+			}
+			set
+			{
+				if ((this._Truong_39 != value))
+				{
+					this._Truong_39 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
+		public string Truong_40
+		{
+			get
+			{
+				return this._Truong_40;
+			}
+			set
+			{
+				if ((this._Truong_40 != value))
+				{
+					this._Truong_40 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
+		public string Truong_41
+		{
+			get
+			{
+				return this._Truong_41;
+			}
+			set
+			{
+				if ((this._Truong_41 != value))
+				{
+					this._Truong_41 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
+		public string Truong_42
+		{
+			get
+			{
+				return this._Truong_42;
+			}
+			set
+			{
+				if ((this._Truong_42 != value))
+				{
+					this._Truong_42 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
+		public string Truong_43
+		{
+			get
+			{
+				return this._Truong_43;
+			}
+			set
+			{
+				if ((this._Truong_43 != value))
+				{
+					this._Truong_43 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDataDivisionResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Cot_J;
+		
+		private string _Cot_K;
+		
+		private string _Cot_M;
+		
+		private string _Cot_N;
+		
+		private string _Cot_O;
+		
+		private string _Cot_P;
+		
+		private string _Cot_Q;
+		
+		private string _Cot_R;
+		
+		private string _Cot_S;
+		
+		private string _Cot_T;
+		
+		private string _Cot_U;
+		
+		private string _Cot_X;
+		
+		private System.Nullable<System.DateTime> _DateCreate;
+		
+		private string _Cot_Y;
+		
+		private string _Cot_V;
+		
+		private string _Cot_Z;
+		
+		private System.Nullable<int> _soluong;
+		
+		private string _Cot_AA;
+		
+		private string _Cot_AB;
+		
+		private string _Cot_AC;
+		
+		private string _Cot_AD;
+		
+		private string _Cot_AE;
+		
+		private string _Cot_AF;
+		
+		public GetDataDivisionResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_J", DbType="NVarChar(255)")]
+		public string Cot_J
+		{
+			get
+			{
+				return this._Cot_J;
+			}
+			set
+			{
+				if ((this._Cot_J != value))
+				{
+					this._Cot_J = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_K", DbType="NVarChar(255)")]
+		public string Cot_K
+		{
+			get
+			{
+				return this._Cot_K;
+			}
+			set
+			{
+				if ((this._Cot_K != value))
+				{
+					this._Cot_K = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_M", DbType="NVarChar(255)")]
+		public string Cot_M
+		{
+			get
+			{
+				return this._Cot_M;
+			}
+			set
+			{
+				if ((this._Cot_M != value))
+				{
+					this._Cot_M = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_N", DbType="NVarChar(255)")]
+		public string Cot_N
+		{
+			get
+			{
+				return this._Cot_N;
+			}
+			set
+			{
+				if ((this._Cot_N != value))
+				{
+					this._Cot_N = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_O", DbType="NVarChar(255)")]
+		public string Cot_O
+		{
+			get
+			{
+				return this._Cot_O;
+			}
+			set
+			{
+				if ((this._Cot_O != value))
+				{
+					this._Cot_O = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_P", DbType="NVarChar(255)")]
+		public string Cot_P
+		{
+			get
+			{
+				return this._Cot_P;
+			}
+			set
+			{
+				if ((this._Cot_P != value))
+				{
+					this._Cot_P = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Q", DbType="NVarChar(255)")]
+		public string Cot_Q
+		{
+			get
+			{
+				return this._Cot_Q;
+			}
+			set
+			{
+				if ((this._Cot_Q != value))
+				{
+					this._Cot_Q = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_R", DbType="NVarChar(255)")]
+		public string Cot_R
+		{
+			get
+			{
+				return this._Cot_R;
+			}
+			set
+			{
+				if ((this._Cot_R != value))
+				{
+					this._Cot_R = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_S", DbType="NVarChar(255)")]
+		public string Cot_S
+		{
+			get
+			{
+				return this._Cot_S;
+			}
+			set
+			{
+				if ((this._Cot_S != value))
+				{
+					this._Cot_S = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_T", DbType="NVarChar(255)")]
+		public string Cot_T
+		{
+			get
+			{
+				return this._Cot_T;
+			}
+			set
+			{
+				if ((this._Cot_T != value))
+				{
+					this._Cot_T = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_U", DbType="NVarChar(255)")]
+		public string Cot_U
+		{
+			get
+			{
+				return this._Cot_U;
+			}
+			set
+			{
+				if ((this._Cot_U != value))
+				{
+					this._Cot_U = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_X", DbType="NVarChar(255)")]
+		public string Cot_X
+		{
+			get
+			{
+				return this._Cot_X;
+			}
+			set
+			{
+				if ((this._Cot_X != value))
+				{
+					this._Cot_X = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> DateCreate
+		{
+			get
+			{
+				return this._DateCreate;
+			}
+			set
+			{
+				if ((this._DateCreate != value))
+				{
+					this._DateCreate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Y", DbType="NVarChar(255)")]
+		public string Cot_Y
+		{
+			get
+			{
+				return this._Cot_Y;
+			}
+			set
+			{
+				if ((this._Cot_Y != value))
+				{
+					this._Cot_Y = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_V", DbType="NVarChar(255)")]
+		public string Cot_V
+		{
+			get
+			{
+				return this._Cot_V;
+			}
+			set
+			{
+				if ((this._Cot_V != value))
+				{
+					this._Cot_V = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
+		public System.Nullable<int> soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AA", DbType="NVarChar(255)")]
+		public string Cot_AA
+		{
+			get
+			{
+				return this._Cot_AA;
+			}
+			set
+			{
+				if ((this._Cot_AA != value))
+				{
+					this._Cot_AA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AB", DbType="NVarChar(255)")]
+		public string Cot_AB
+		{
+			get
+			{
+				return this._Cot_AB;
+			}
+			set
+			{
+				if ((this._Cot_AB != value))
+				{
+					this._Cot_AB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AC", DbType="NVarChar(255)")]
+		public string Cot_AC
+		{
+			get
+			{
+				return this._Cot_AC;
+			}
+			set
+			{
+				if ((this._Cot_AC != value))
+				{
+					this._Cot_AC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AD", DbType="NVarChar(255)")]
+		public string Cot_AD
+		{
+			get
+			{
+				return this._Cot_AD;
+			}
+			set
+			{
+				if ((this._Cot_AD != value))
+				{
+					this._Cot_AD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AE", DbType="NVarChar(255)")]
+		public string Cot_AE
+		{
+			get
+			{
+				return this._Cot_AE;
+			}
+			set
+			{
+				if ((this._Cot_AE != value))
+				{
+					this._Cot_AE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AF", DbType="NVarChar(255)")]
+		public string Cot_AF
+		{
+			get
+			{
+				return this._Cot_AF;
+			}
+			set
+			{
+				if ((this._Cot_AF != value))
+				{
+					this._Cot_AF = value;
 				}
 			}
 		}
@@ -9102,1872 +12363,6 @@ namespace Nencho
 		}
 	}
 	
-	public partial class GetDataDEResult
-	{
-		
-		private string _Cot_G;
-		
-		private string _Truong_26;
-		
-		private string _Truong_27;
-		
-		private string _Truong_28;
-		
-		private string _Truong_29;
-		
-		private string _Truong_30;
-		
-		private string _Truong_31;
-		
-		private string _Truong_32;
-		
-		private string _Truong_33;
-		
-		private string _Truong_34;
-		
-		private string _Truong_35;
-		
-		private string _Truong_36;
-		
-		private string _Truong_37;
-		
-		private string _Truong_38;
-		
-		private string _Truong_39;
-		
-		private string _Truong_40;
-		
-		private string _Truong_41;
-		
-		private string _Truong_42;
-		
-		private string _Truong_43;
-		
-		public GetDataDEResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
-		public string Cot_G
-		{
-			get
-			{
-				return this._Cot_G;
-			}
-			set
-			{
-				if ((this._Cot_G != value))
-				{
-					this._Cot_G = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
-		public string Truong_26
-		{
-			get
-			{
-				return this._Truong_26;
-			}
-			set
-			{
-				if ((this._Truong_26 != value))
-				{
-					this._Truong_26 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
-		public string Truong_27
-		{
-			get
-			{
-				return this._Truong_27;
-			}
-			set
-			{
-				if ((this._Truong_27 != value))
-				{
-					this._Truong_27 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
-		public string Truong_28
-		{
-			get
-			{
-				return this._Truong_28;
-			}
-			set
-			{
-				if ((this._Truong_28 != value))
-				{
-					this._Truong_28 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
-		public string Truong_29
-		{
-			get
-			{
-				return this._Truong_29;
-			}
-			set
-			{
-				if ((this._Truong_29 != value))
-				{
-					this._Truong_29 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
-		public string Truong_30
-		{
-			get
-			{
-				return this._Truong_30;
-			}
-			set
-			{
-				if ((this._Truong_30 != value))
-				{
-					this._Truong_30 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
-		public string Truong_31
-		{
-			get
-			{
-				return this._Truong_31;
-			}
-			set
-			{
-				if ((this._Truong_31 != value))
-				{
-					this._Truong_31 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
-		public string Truong_32
-		{
-			get
-			{
-				return this._Truong_32;
-			}
-			set
-			{
-				if ((this._Truong_32 != value))
-				{
-					this._Truong_32 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
-		public string Truong_33
-		{
-			get
-			{
-				return this._Truong_33;
-			}
-			set
-			{
-				if ((this._Truong_33 != value))
-				{
-					this._Truong_33 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
-		public string Truong_34
-		{
-			get
-			{
-				return this._Truong_34;
-			}
-			set
-			{
-				if ((this._Truong_34 != value))
-				{
-					this._Truong_34 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
-		public string Truong_35
-		{
-			get
-			{
-				return this._Truong_35;
-			}
-			set
-			{
-				if ((this._Truong_35 != value))
-				{
-					this._Truong_35 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
-		public string Truong_36
-		{
-			get
-			{
-				return this._Truong_36;
-			}
-			set
-			{
-				if ((this._Truong_36 != value))
-				{
-					this._Truong_36 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
-		public string Truong_37
-		{
-			get
-			{
-				return this._Truong_37;
-			}
-			set
-			{
-				if ((this._Truong_37 != value))
-				{
-					this._Truong_37 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
-		public string Truong_38
-		{
-			get
-			{
-				return this._Truong_38;
-			}
-			set
-			{
-				if ((this._Truong_38 != value))
-				{
-					this._Truong_38 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
-		public string Truong_39
-		{
-			get
-			{
-				return this._Truong_39;
-			}
-			set
-			{
-				if ((this._Truong_39 != value))
-				{
-					this._Truong_39 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
-		public string Truong_40
-		{
-			get
-			{
-				return this._Truong_40;
-			}
-			set
-			{
-				if ((this._Truong_40 != value))
-				{
-					this._Truong_40 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
-		public string Truong_41
-		{
-			get
-			{
-				return this._Truong_41;
-			}
-			set
-			{
-				if ((this._Truong_41 != value))
-				{
-					this._Truong_41 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
-		public string Truong_42
-		{
-			get
-			{
-				return this._Truong_42;
-			}
-			set
-			{
-				if ((this._Truong_42 != value))
-				{
-					this._Truong_42 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
-		public string Truong_43
-		{
-			get
-			{
-				return this._Truong_43;
-			}
-			set
-			{
-				if ((this._Truong_43 != value))
-				{
-					this._Truong_43 = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetDataDECompleteResult
-	{
-		
-		private string _Cot_G;
-		
-		private string _Truong_26;
-		
-		private string _Truong_27;
-		
-		private string _Truong_28;
-		
-		private string _Truong_29;
-		
-		private string _Truong_30;
-		
-		private string _Truong_31;
-		
-		private string _Truong_32;
-		
-		private string _Truong_33;
-		
-		private string _Truong_34;
-		
-		private string _Truong_35;
-		
-		private string _Truong_36;
-		
-		private string _Truong_37;
-		
-		private string _Truong_38;
-		
-		private string _Truong_39;
-		
-		private string _Truong_40;
-		
-		private string _Truong_41;
-		
-		private string _Truong_42;
-		
-		private string _Truong_43;
-		
-		public GetDataDECompleteResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
-		public string Cot_G
-		{
-			get
-			{
-				return this._Cot_G;
-			}
-			set
-			{
-				if ((this._Cot_G != value))
-				{
-					this._Cot_G = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
-		public string Truong_26
-		{
-			get
-			{
-				return this._Truong_26;
-			}
-			set
-			{
-				if ((this._Truong_26 != value))
-				{
-					this._Truong_26 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
-		public string Truong_27
-		{
-			get
-			{
-				return this._Truong_27;
-			}
-			set
-			{
-				if ((this._Truong_27 != value))
-				{
-					this._Truong_27 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
-		public string Truong_28
-		{
-			get
-			{
-				return this._Truong_28;
-			}
-			set
-			{
-				if ((this._Truong_28 != value))
-				{
-					this._Truong_28 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
-		public string Truong_29
-		{
-			get
-			{
-				return this._Truong_29;
-			}
-			set
-			{
-				if ((this._Truong_29 != value))
-				{
-					this._Truong_29 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
-		public string Truong_30
-		{
-			get
-			{
-				return this._Truong_30;
-			}
-			set
-			{
-				if ((this._Truong_30 != value))
-				{
-					this._Truong_30 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
-		public string Truong_31
-		{
-			get
-			{
-				return this._Truong_31;
-			}
-			set
-			{
-				if ((this._Truong_31 != value))
-				{
-					this._Truong_31 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
-		public string Truong_32
-		{
-			get
-			{
-				return this._Truong_32;
-			}
-			set
-			{
-				if ((this._Truong_32 != value))
-				{
-					this._Truong_32 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
-		public string Truong_33
-		{
-			get
-			{
-				return this._Truong_33;
-			}
-			set
-			{
-				if ((this._Truong_33 != value))
-				{
-					this._Truong_33 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
-		public string Truong_34
-		{
-			get
-			{
-				return this._Truong_34;
-			}
-			set
-			{
-				if ((this._Truong_34 != value))
-				{
-					this._Truong_34 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
-		public string Truong_35
-		{
-			get
-			{
-				return this._Truong_35;
-			}
-			set
-			{
-				if ((this._Truong_35 != value))
-				{
-					this._Truong_35 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
-		public string Truong_36
-		{
-			get
-			{
-				return this._Truong_36;
-			}
-			set
-			{
-				if ((this._Truong_36 != value))
-				{
-					this._Truong_36 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
-		public string Truong_37
-		{
-			get
-			{
-				return this._Truong_37;
-			}
-			set
-			{
-				if ((this._Truong_37 != value))
-				{
-					this._Truong_37 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
-		public string Truong_38
-		{
-			get
-			{
-				return this._Truong_38;
-			}
-			set
-			{
-				if ((this._Truong_38 != value))
-				{
-					this._Truong_38 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
-		public string Truong_39
-		{
-			get
-			{
-				return this._Truong_39;
-			}
-			set
-			{
-				if ((this._Truong_39 != value))
-				{
-					this._Truong_39 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
-		public string Truong_40
-		{
-			get
-			{
-				return this._Truong_40;
-			}
-			set
-			{
-				if ((this._Truong_40 != value))
-				{
-					this._Truong_40 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
-		public string Truong_41
-		{
-			get
-			{
-				return this._Truong_41;
-			}
-			set
-			{
-				if ((this._Truong_41 != value))
-				{
-					this._Truong_41 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
-		public string Truong_42
-		{
-			get
-			{
-				return this._Truong_42;
-			}
-			set
-			{
-				if ((this._Truong_42 != value))
-				{
-					this._Truong_42 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
-		public string Truong_43
-		{
-			get
-			{
-				return this._Truong_43;
-			}
-			set
-			{
-				if ((this._Truong_43 != value))
-				{
-					this._Truong_43 = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetDataDivisionResult
-	{
-		
-		private string _Cot_G;
-		
-		private string _Cot_J;
-		
-		private string _Cot_K;
-		
-		private string _Cot_M;
-		
-		private string _Cot_N;
-		
-		private string _Cot_O;
-		
-		private string _Cot_P;
-		
-		private string _Cot_Q;
-		
-		private string _Cot_R;
-		
-		private string _Cot_S;
-		
-		private string _Cot_T;
-		
-		private string _Cot_U;
-		
-		private string _Cot_X;
-		
-		private System.Nullable<System.DateTime> _DateCreate;
-		
-		private string _Cot_Y;
-		
-		private string _Cot_V;
-		
-		private string _Cot_Z;
-		
-		private System.Nullable<int> _soluong;
-		
-		private string _Cot_AA;
-		
-		private string _Cot_AB;
-		
-		private string _Cot_AC;
-		
-		private string _Cot_AD;
-		
-		private string _Cot_AE;
-		
-		private string _Cot_AF;
-		
-		public GetDataDivisionResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
-		public string Cot_G
-		{
-			get
-			{
-				return this._Cot_G;
-			}
-			set
-			{
-				if ((this._Cot_G != value))
-				{
-					this._Cot_G = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_J", DbType="NVarChar(255)")]
-		public string Cot_J
-		{
-			get
-			{
-				return this._Cot_J;
-			}
-			set
-			{
-				if ((this._Cot_J != value))
-				{
-					this._Cot_J = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_K", DbType="NVarChar(255)")]
-		public string Cot_K
-		{
-			get
-			{
-				return this._Cot_K;
-			}
-			set
-			{
-				if ((this._Cot_K != value))
-				{
-					this._Cot_K = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_M", DbType="NVarChar(255)")]
-		public string Cot_M
-		{
-			get
-			{
-				return this._Cot_M;
-			}
-			set
-			{
-				if ((this._Cot_M != value))
-				{
-					this._Cot_M = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_N", DbType="NVarChar(255)")]
-		public string Cot_N
-		{
-			get
-			{
-				return this._Cot_N;
-			}
-			set
-			{
-				if ((this._Cot_N != value))
-				{
-					this._Cot_N = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_O", DbType="NVarChar(255)")]
-		public string Cot_O
-		{
-			get
-			{
-				return this._Cot_O;
-			}
-			set
-			{
-				if ((this._Cot_O != value))
-				{
-					this._Cot_O = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_P", DbType="NVarChar(255)")]
-		public string Cot_P
-		{
-			get
-			{
-				return this._Cot_P;
-			}
-			set
-			{
-				if ((this._Cot_P != value))
-				{
-					this._Cot_P = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Q", DbType="NVarChar(255)")]
-		public string Cot_Q
-		{
-			get
-			{
-				return this._Cot_Q;
-			}
-			set
-			{
-				if ((this._Cot_Q != value))
-				{
-					this._Cot_Q = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_R", DbType="NVarChar(255)")]
-		public string Cot_R
-		{
-			get
-			{
-				return this._Cot_R;
-			}
-			set
-			{
-				if ((this._Cot_R != value))
-				{
-					this._Cot_R = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_S", DbType="NVarChar(255)")]
-		public string Cot_S
-		{
-			get
-			{
-				return this._Cot_S;
-			}
-			set
-			{
-				if ((this._Cot_S != value))
-				{
-					this._Cot_S = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_T", DbType="NVarChar(255)")]
-		public string Cot_T
-		{
-			get
-			{
-				return this._Cot_T;
-			}
-			set
-			{
-				if ((this._Cot_T != value))
-				{
-					this._Cot_T = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_U", DbType="NVarChar(255)")]
-		public string Cot_U
-		{
-			get
-			{
-				return this._Cot_U;
-			}
-			set
-			{
-				if ((this._Cot_U != value))
-				{
-					this._Cot_U = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_X", DbType="NVarChar(255)")]
-		public string Cot_X
-		{
-			get
-			{
-				return this._Cot_X;
-			}
-			set
-			{
-				if ((this._Cot_X != value))
-				{
-					this._Cot_X = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCreate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> DateCreate
-		{
-			get
-			{
-				return this._DateCreate;
-			}
-			set
-			{
-				if ((this._DateCreate != value))
-				{
-					this._DateCreate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Y", DbType="NVarChar(255)")]
-		public string Cot_Y
-		{
-			get
-			{
-				return this._Cot_Y;
-			}
-			set
-			{
-				if ((this._Cot_Y != value))
-				{
-					this._Cot_Y = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_V", DbType="NVarChar(255)")]
-		public string Cot_V
-		{
-			get
-			{
-				return this._Cot_V;
-			}
-			set
-			{
-				if ((this._Cot_V != value))
-				{
-					this._Cot_V = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-			{
-				if ((this._Cot_Z != value))
-				{
-					this._Cot_Z = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
-		public System.Nullable<int> soluong
-		{
-			get
-			{
-				return this._soluong;
-			}
-			set
-			{
-				if ((this._soluong != value))
-				{
-					this._soluong = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AA", DbType="NVarChar(255)")]
-		public string Cot_AA
-		{
-			get
-			{
-				return this._Cot_AA;
-			}
-			set
-			{
-				if ((this._Cot_AA != value))
-				{
-					this._Cot_AA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AB", DbType="NVarChar(255)")]
-		public string Cot_AB
-		{
-			get
-			{
-				return this._Cot_AB;
-			}
-			set
-			{
-				if ((this._Cot_AB != value))
-				{
-					this._Cot_AB = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AC", DbType="NVarChar(255)")]
-		public string Cot_AC
-		{
-			get
-			{
-				return this._Cot_AC;
-			}
-			set
-			{
-				if ((this._Cot_AC != value))
-				{
-					this._Cot_AC = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AD", DbType="NVarChar(255)")]
-		public string Cot_AD
-		{
-			get
-			{
-				return this._Cot_AD;
-			}
-			set
-			{
-				if ((this._Cot_AD != value))
-				{
-					this._Cot_AD = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AE", DbType="NVarChar(255)")]
-		public string Cot_AE
-		{
-			get
-			{
-				return this._Cot_AE;
-			}
-			set
-			{
-				if ((this._Cot_AE != value))
-				{
-					this._Cot_AE = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_AF", DbType="NVarChar(255)")]
-		public string Cot_AF
-		{
-			get
-			{
-				return this._Cot_AF;
-			}
-			set
-			{
-				if ((this._Cot_AF != value))
-				{
-					this._Cot_AF = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetDataCheckerResult
-	{
-		
-		private string _Cot_G;
-		
-		private string _Truong_26;
-		
-		private string _Truong_27;
-		
-		private string _Truong_28;
-		
-		private string _Truong_29;
-		
-		private string _Truong_30;
-		
-		private string _Truong_31;
-		
-		private string _Truong_32;
-		
-		private string _Truong_33;
-		
-		private string _Truong_34;
-		
-		private string _Truong_35;
-		
-		private string _Truong_36;
-		
-		private string _Truong_37;
-		
-		private string _Truong_38;
-		
-		private string _Truong_39;
-		
-		private string _Truong_40;
-		
-		private string _Truong_41;
-		
-		private string _Truong_42;
-		
-		private string _Truong_43;
-		
-		public GetDataCheckerResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
-		public string Cot_G
-		{
-			get
-			{
-				return this._Cot_G;
-			}
-			set
-			{
-				if ((this._Cot_G != value))
-				{
-					this._Cot_G = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
-		public string Truong_26
-		{
-			get
-			{
-				return this._Truong_26;
-			}
-			set
-			{
-				if ((this._Truong_26 != value))
-				{
-					this._Truong_26 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
-		public string Truong_27
-		{
-			get
-			{
-				return this._Truong_27;
-			}
-			set
-			{
-				if ((this._Truong_27 != value))
-				{
-					this._Truong_27 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
-		public string Truong_28
-		{
-			get
-			{
-				return this._Truong_28;
-			}
-			set
-			{
-				if ((this._Truong_28 != value))
-				{
-					this._Truong_28 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
-		public string Truong_29
-		{
-			get
-			{
-				return this._Truong_29;
-			}
-			set
-			{
-				if ((this._Truong_29 != value))
-				{
-					this._Truong_29 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
-		public string Truong_30
-		{
-			get
-			{
-				return this._Truong_30;
-			}
-			set
-			{
-				if ((this._Truong_30 != value))
-				{
-					this._Truong_30 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
-		public string Truong_31
-		{
-			get
-			{
-				return this._Truong_31;
-			}
-			set
-			{
-				if ((this._Truong_31 != value))
-				{
-					this._Truong_31 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
-		public string Truong_32
-		{
-			get
-			{
-				return this._Truong_32;
-			}
-			set
-			{
-				if ((this._Truong_32 != value))
-				{
-					this._Truong_32 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
-		public string Truong_33
-		{
-			get
-			{
-				return this._Truong_33;
-			}
-			set
-			{
-				if ((this._Truong_33 != value))
-				{
-					this._Truong_33 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
-		public string Truong_34
-		{
-			get
-			{
-				return this._Truong_34;
-			}
-			set
-			{
-				if ((this._Truong_34 != value))
-				{
-					this._Truong_34 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
-		public string Truong_35
-		{
-			get
-			{
-				return this._Truong_35;
-			}
-			set
-			{
-				if ((this._Truong_35 != value))
-				{
-					this._Truong_35 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
-		public string Truong_36
-		{
-			get
-			{
-				return this._Truong_36;
-			}
-			set
-			{
-				if ((this._Truong_36 != value))
-				{
-					this._Truong_36 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
-		public string Truong_37
-		{
-			get
-			{
-				return this._Truong_37;
-			}
-			set
-			{
-				if ((this._Truong_37 != value))
-				{
-					this._Truong_37 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
-		public string Truong_38
-		{
-			get
-			{
-				return this._Truong_38;
-			}
-			set
-			{
-				if ((this._Truong_38 != value))
-				{
-					this._Truong_38 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
-		public string Truong_39
-		{
-			get
-			{
-				return this._Truong_39;
-			}
-			set
-			{
-				if ((this._Truong_39 != value))
-				{
-					this._Truong_39 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
-		public string Truong_40
-		{
-			get
-			{
-				return this._Truong_40;
-			}
-			set
-			{
-				if ((this._Truong_40 != value))
-				{
-					this._Truong_40 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
-		public string Truong_41
-		{
-			get
-			{
-				return this._Truong_41;
-			}
-			set
-			{
-				if ((this._Truong_41 != value))
-				{
-					this._Truong_41 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
-		public string Truong_42
-		{
-			get
-			{
-				return this._Truong_42;
-			}
-			set
-			{
-				if ((this._Truong_42 != value))
-				{
-					this._Truong_42 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
-		public string Truong_43
-		{
-			get
-			{
-				return this._Truong_43;
-			}
-			set
-			{
-				if ((this._Truong_43 != value))
-				{
-					this._Truong_43 = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetDataCheckerCompleteResult
-	{
-		
-		private string _Cot_G;
-		
-		private string _Truong_26;
-		
-		private string _Truong_27;
-		
-		private string _Truong_28;
-		
-		private string _Truong_29;
-		
-		private string _Truong_30;
-		
-		private string _Truong_31;
-		
-		private string _Truong_32;
-		
-		private string _Truong_33;
-		
-		private string _Truong_34;
-		
-		private string _Truong_35;
-		
-		private string _Truong_36;
-		
-		private string _Truong_37;
-		
-		private string _Truong_38;
-		
-		private string _Truong_39;
-		
-		private string _Truong_40;
-		
-		private string _Truong_41;
-		
-		private string _Truong_42;
-		
-		private string _Truong_43;
-		
-		public GetDataCheckerCompleteResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
-		public string Cot_G
-		{
-			get
-			{
-				return this._Cot_G;
-			}
-			set
-			{
-				if ((this._Cot_G != value))
-				{
-					this._Cot_G = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
-		public string Truong_26
-		{
-			get
-			{
-				return this._Truong_26;
-			}
-			set
-			{
-				if ((this._Truong_26 != value))
-				{
-					this._Truong_26 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
-		public string Truong_27
-		{
-			get
-			{
-				return this._Truong_27;
-			}
-			set
-			{
-				if ((this._Truong_27 != value))
-				{
-					this._Truong_27 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
-		public string Truong_28
-		{
-			get
-			{
-				return this._Truong_28;
-			}
-			set
-			{
-				if ((this._Truong_28 != value))
-				{
-					this._Truong_28 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
-		public string Truong_29
-		{
-			get
-			{
-				return this._Truong_29;
-			}
-			set
-			{
-				if ((this._Truong_29 != value))
-				{
-					this._Truong_29 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
-		public string Truong_30
-		{
-			get
-			{
-				return this._Truong_30;
-			}
-			set
-			{
-				if ((this._Truong_30 != value))
-				{
-					this._Truong_30 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
-		public string Truong_31
-		{
-			get
-			{
-				return this._Truong_31;
-			}
-			set
-			{
-				if ((this._Truong_31 != value))
-				{
-					this._Truong_31 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
-		public string Truong_32
-		{
-			get
-			{
-				return this._Truong_32;
-			}
-			set
-			{
-				if ((this._Truong_32 != value))
-				{
-					this._Truong_32 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
-		public string Truong_33
-		{
-			get
-			{
-				return this._Truong_33;
-			}
-			set
-			{
-				if ((this._Truong_33 != value))
-				{
-					this._Truong_33 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
-		public string Truong_34
-		{
-			get
-			{
-				return this._Truong_34;
-			}
-			set
-			{
-				if ((this._Truong_34 != value))
-				{
-					this._Truong_34 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
-		public string Truong_35
-		{
-			get
-			{
-				return this._Truong_35;
-			}
-			set
-			{
-				if ((this._Truong_35 != value))
-				{
-					this._Truong_35 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
-		public string Truong_36
-		{
-			get
-			{
-				return this._Truong_36;
-			}
-			set
-			{
-				if ((this._Truong_36 != value))
-				{
-					this._Truong_36 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
-		public string Truong_37
-		{
-			get
-			{
-				return this._Truong_37;
-			}
-			set
-			{
-				if ((this._Truong_37 != value))
-				{
-					this._Truong_37 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
-		public string Truong_38
-		{
-			get
-			{
-				return this._Truong_38;
-			}
-			set
-			{
-				if ((this._Truong_38 != value))
-				{
-					this._Truong_38 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_39", DbType="NVarChar(255)")]
-		public string Truong_39
-		{
-			get
-			{
-				return this._Truong_39;
-			}
-			set
-			{
-				if ((this._Truong_39 != value))
-				{
-					this._Truong_39 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_40", DbType="NVarChar(255)")]
-		public string Truong_40
-		{
-			get
-			{
-				return this._Truong_40;
-			}
-			set
-			{
-				if ((this._Truong_40 != value))
-				{
-					this._Truong_40 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_41", DbType="NVarChar(255)")]
-		public string Truong_41
-		{
-			get
-			{
-				return this._Truong_41;
-			}
-			set
-			{
-				if ((this._Truong_41 != value))
-				{
-					this._Truong_41 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_42", DbType="NVarChar(255)")]
-		public string Truong_42
-		{
-			get
-			{
-				return this._Truong_42;
-			}
-			set
-			{
-				if ((this._Truong_42 != value))
-				{
-					this._Truong_42 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_43", DbType="NVarChar(255)")]
-		public string Truong_43
-		{
-			get
-			{
-				return this._Truong_43;
-			}
-			set
-			{
-				if ((this._Truong_43 != value))
-				{
-					this._Truong_43 = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetBatchNO_ExportExcelResult
-	{
-		
-		private string _Cot_Z;
-		
-		public GetBatchNO_ExportExcelResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
-		public string Cot_Z
-		{
-			get
-			{
-				return this._Cot_Z;
-			}
-			set
-			{
-				if ((this._Cot_Z != value))
-				{
-					this._Cot_Z = value;
-				}
-			}
-		}
-	}
-	
 	public partial class NangSuatCheck1Result
 	{
 		
@@ -11069,7 +12464,7 @@ namespace Nencho
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGian", DbType="VarChar(8)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGian", DbType="VarChar(7)")]
 		public string ThoiGian
 		{
 			get
@@ -11203,7 +12598,7 @@ namespace Nencho
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGian", DbType="VarChar(8)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGian", DbType="VarChar(7)")]
 		public string ThoiGian
 		{
 			get
@@ -11231,6 +12626,416 @@ namespace Nencho
 				if ((this._HieuSuat != value))
 				{
 					this._HieuSuat = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ThongKeTienDo_Checker1Result
+	{
+		
+		private string _name;
+		
+		private int _soluong;
+		
+		public ThongKeTienDo_Checker1Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(23) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
+		public int soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ThongKeTienDo_Checker2Result
+	{
+		
+		private string _name;
+		
+		private int _soluong;
+		
+		public ThongKeTienDo_Checker2Result()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(23) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
+		public int soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
+		}
+	}
+	
+	public partial class XuatDuLieuDacBietResult
+	{
+		
+		private string _IDFile;
+		
+		private string _Cot_G;
+		
+		private string _Truong_26;
+		
+		private string _Truong_27;
+		
+		private string _Truong_28;
+		
+		private string _Truong_29;
+		
+		private string _Truong_30;
+		
+		private string _Truong_31;
+		
+		private string _Truong_32;
+		
+		private string _Truong_33;
+		
+		private string _Truong_34;
+		
+		private string _Truong_35;
+		
+		private string _Truong_36;
+		
+		public XuatDuLieuDacBietResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFile", DbType="NVarChar(255)")]
+		public string IDFile
+		{
+			get
+			{
+				return this._IDFile;
+			}
+			set
+			{
+				if ((this._IDFile != value))
+				{
+					this._IDFile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_26", DbType="NVarChar(255)")]
+		public string Truong_26
+		{
+			get
+			{
+				return this._Truong_26;
+			}
+			set
+			{
+				if ((this._Truong_26 != value))
+				{
+					this._Truong_26 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_27", DbType="NVarChar(255)")]
+		public string Truong_27
+		{
+			get
+			{
+				return this._Truong_27;
+			}
+			set
+			{
+				if ((this._Truong_27 != value))
+				{
+					this._Truong_27 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_28", DbType="NVarChar(255)")]
+		public string Truong_28
+		{
+			get
+			{
+				return this._Truong_28;
+			}
+			set
+			{
+				if ((this._Truong_28 != value))
+				{
+					this._Truong_28 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_29", DbType="NVarChar(255)")]
+		public string Truong_29
+		{
+			get
+			{
+				return this._Truong_29;
+			}
+			set
+			{
+				if ((this._Truong_29 != value))
+				{
+					this._Truong_29 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_30", DbType="NVarChar(255)")]
+		public string Truong_30
+		{
+			get
+			{
+				return this._Truong_30;
+			}
+			set
+			{
+				if ((this._Truong_30 != value))
+				{
+					this._Truong_30 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_31", DbType="NVarChar(255)")]
+		public string Truong_31
+		{
+			get
+			{
+				return this._Truong_31;
+			}
+			set
+			{
+				if ((this._Truong_31 != value))
+				{
+					this._Truong_31 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_32", DbType="NVarChar(255)")]
+		public string Truong_32
+		{
+			get
+			{
+				return this._Truong_32;
+			}
+			set
+			{
+				if ((this._Truong_32 != value))
+				{
+					this._Truong_32 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_33", DbType="NVarChar(255)")]
+		public string Truong_33
+		{
+			get
+			{
+				return this._Truong_33;
+			}
+			set
+			{
+				if ((this._Truong_33 != value))
+				{
+					this._Truong_33 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_34", DbType="NVarChar(255)")]
+		public string Truong_34
+		{
+			get
+			{
+				return this._Truong_34;
+			}
+			set
+			{
+				if ((this._Truong_34 != value))
+				{
+					this._Truong_34 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_35", DbType="NVarChar(255)")]
+		public string Truong_35
+		{
+			get
+			{
+				return this._Truong_35;
+			}
+			set
+			{
+				if ((this._Truong_35 != value))
+				{
+					this._Truong_35 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_36", DbType="NVarChar(255)")]
+		public string Truong_36
+		{
+			get
+			{
+				return this._Truong_36;
+			}
+			set
+			{
+				if ((this._Truong_36 != value))
+				{
+					this._Truong_36 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class XuatDuLieuLichSuResult
+	{
+		
+		private string _IDFile;
+		
+		private string _Cot_G;
+		
+		private string _Truong_37;
+		
+		private string _Truong_38;
+		
+		public XuatDuLieuLichSuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDFile", DbType="NVarChar(255)")]
+		public string IDFile
+		{
+			get
+			{
+				return this._IDFile;
+			}
+			set
+			{
+				if ((this._IDFile != value))
+				{
+					this._IDFile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_37", DbType="NVarChar(255)")]
+		public string Truong_37
+		{
+			get
+			{
+				return this._Truong_37;
+			}
+			set
+			{
+				if ((this._Truong_37 != value))
+				{
+					this._Truong_37 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Truong_38", DbType="NVarChar(255)")]
+		public string Truong_38
+		{
+			get
+			{
+				return this._Truong_38;
+			}
+			set
+			{
+				if ((this._Truong_38 != value))
+				{
+					this._Truong_38 = value;
 				}
 			}
 		}

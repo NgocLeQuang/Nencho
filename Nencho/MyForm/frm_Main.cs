@@ -1855,5 +1855,9 @@ namespace Nencho.MyForm
             Global.DataNencho.UpdateTimeLogout(Global.Strtoken);
             Global.DataNencho.ResetToken(Global.StrUsername, Global.StrIdProject, Global.Strtoken);
         }
+
+        private void btn_tiendo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frm_TienDo().ShowDialog();}
     }
 }

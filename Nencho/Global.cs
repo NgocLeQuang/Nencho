@@ -11,5 +11,6 @@
         public static string StrBatch;
         public static string Strtoken;
         public static string StrRole;
+        public static string StrIdProject = "NenCho";
     }
 }

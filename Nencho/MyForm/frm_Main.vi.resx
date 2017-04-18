@@ -117,10 +117,137 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="barSubItem2.Caption" xml:space="preserve">
-    <value>&amp;Quản lý</value>
+  <data name="tab_phancong.Text" xml:space="preserve">
+    <value>Phân công</value>
   </data>
-  <data name="barSubItem3.Caption" xml:space="preserve">
-    <value>&amp;Chức năng</value>
+  <data name="tab_error.Text" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="btn_logout.Caption" xml:space="preserve">
+    <value>&amp;Đăng Xuất</value>
+  </data>
+  <data name="btn_exit.Caption" xml:space="preserve">
+    <value>&amp;Thoát</value>
+  </data>
+  <data name="baritem_Manager.Caption" xml:space="preserve">
+    <value>&amp;Quản Lý</value>
+  </data>
+  <data name="baritem_Option.Caption" xml:space="preserve">
+    <value>&amp;Chức Năng</value>
+  </data>
+  <data name="btn_manageruser.Caption" xml:space="preserve">
+    <value>Quản Lý Tài Khoản</value>
+  </data>
+  <data name="btn_ManagerFiles.Caption" xml:space="preserve">
+    <value>Quản Lý Batch</value>
+  </data>
+  <data name="btn_adddata.Caption" xml:space="preserve">
+    <value>Thêm Dữ Liệu Nhập</value>
+  </data>
+  <data name="btn_ExportExcel.Caption" xml:space="preserve">
+    <value>Xuất Excel</value>
+  </data>
+  <data name="barSubItem2.Caption" xml:space="preserve">
+    <value>&amp;Ngôn ngữ</value>
+  </data>
+  <data name="btn_language_english.Caption" xml:space="preserve">
+    <value>Tiếng Anh</value>
+  </data>
+  <data name="btn_language_japan.Caption" xml:space="preserve">
+    <value>Tiếng Nhật</value>
+  </data>
+  <data name="btn_language_vietnam.Caption" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cbb_batchnode_complete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 4</value>
+  </data>
+  <data name="labelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 9</value>
+  </data>
+  <data name="labelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="labelControl1.Text" xml:space="preserve">
+    <value>BatchNO hoàn thành :</value>
+  </data>
+  <data name="labelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="labelControl2.Text" xml:space="preserve">
+    <value>BatchNO chưa hoàn thành:</value>
+  </data>
+  <data name="cbb_batchno_de.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 5</value>
+  </data>
+  <data name="cbb_batchnochecker_complete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 4</value>
+  </data>
+  <data name="labelControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 9</value>
+  </data>
+  <data name="labelControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="labelControl3.Text" xml:space="preserve">
+    <value>BatchNO hoàn thành :</value>
+  </data>
+  <data name="cbb_batchno_checker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 5</value>
+  </data>
+  <data name="labelControl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="labelControl4.Text" xml:space="preserve">
+    <value>BatchNO chưa hoàn thành:</value>
+  </data>
+  <data name="cbb_batchnoadmin_complete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 4</value>
+  </data>
+  <data name="labelControl7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 9</value>
+  </data>
+  <data name="labelControl7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="labelControl7.Text" xml:space="preserve">
+    <value>BatchNO hoàn thành :</value>
+  </data>
+  <data name="cbb_batchno_admin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 5</value>
+  </data>
+  <data name="labelControl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="labelControl6.Text" xml:space="preserve">
+    <value>BatchNO chưa hoàn thành:</value>
+  </data>
+  <data name="tab_error_checker1.Text" xml:space="preserve">
+    <value>Lỗi Checker 1</value>
+  </data>
+  <data name="tab_error_checker2.Text" xml:space="preserve">
+    <value>Lỗi Checker 2</value>
+  </data>
+  <data name="cbb_batchno_error_complete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 4</value>
+  </data>
+  <data name="labelControl8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 9</value>
+  </data>
+  <data name="labelControl8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="labelControl8.Text" xml:space="preserve">
+    <value>BatchNO hoàn thành :</value>
+  </data>
+  <data name="cbb_batchno_error.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 5</value>
+  </data>
+  <data name="labelControl9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="labelControl9.Text" xml:space="preserve">
+    <value>BatchNO chưa hoàn thành:</value>
   </data>
 </root>

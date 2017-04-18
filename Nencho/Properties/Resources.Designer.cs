@@ -59,5 +59,55 @@ namespace Nencho.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DuLieuDacBiet {
+            get {
+                object obj = ResourceManager.GetObject("DuLieuDacBiet", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] FileXuatTong {
+            get {
+                object obj = ResourceManager.GetObject("FileXuatTong", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ListLichSu {
+            get {
+                object obj = ResourceManager.GetObject("ListLichSu", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Productivity_Checker1 {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_Checker1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Productivity_Checker2 {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_Checker2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

@@ -29,26 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ManagerUser));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btn_delete_user = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Edit = new DevExpress.XtraEditors.SimpleButton();
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
-            this.cbb_role = new System.Windows.Forms.ComboBox();
             this.txt_nhanvien = new DevExpress.XtraEditors.TextEdit();
             this.txt_password = new DevExpress.XtraEditors.TextEdit();
             this.txt_username = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dgv_listuser = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btn_delete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_nhanvien.Properties)).BeginInit();
@@ -56,23 +51,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_username.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listuser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_delete)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             resources.ApplyResources(this.panelControl1, "panelControl1");
+            this.panelControl1.Controls.Add(this.btn_delete_user);
             this.panelControl1.Controls.Add(this.btn_Edit);
             this.panelControl1.Controls.Add(this.btn_them);
-            this.panelControl1.Controls.Add(this.cbb_role);
             this.panelControl1.Controls.Add(this.txt_nhanvien);
             this.panelControl1.Controls.Add(this.txt_password);
             this.panelControl1.Controls.Add(this.txt_username);
             this.panelControl1.Controls.Add(this.labelControl4);
-            this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Name = "panelControl1";
+            // 
+            // btn_delete_user
+            // 
+            resources.ApplyResources(this.btn_delete_user, "btn_delete_user");
+            this.btn_delete_user.Name = "btn_delete_user";
+            this.btn_delete_user.Click += new System.EventHandler(this.btn_delete_user_Click);
             // 
             // btn_Edit
             // 
@@ -85,12 +84,6 @@
             resources.ApplyResources(this.btn_them, "btn_them");
             this.btn_them.Name = "btn_them";
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
-            // 
-            // cbb_role
-            // 
-            resources.ApplyResources(this.cbb_role, "cbb_role");
-            this.cbb_role.FormattingEnabled = true;
-            this.cbb_role.Name = "cbb_role";
             // 
             // txt_nhanvien
             // 
@@ -154,11 +147,6 @@
             resources.ApplyResources(this.labelControl4, "labelControl4");
             this.labelControl4.Name = "labelControl4";
             // 
-            // labelControl3
-            // 
-            resources.ApplyResources(this.labelControl3, "labelControl3");
-            this.labelControl3.Name = "labelControl3";
-            // 
             // labelControl2
             // 
             resources.ApplyResources(this.labelControl2, "labelControl2");
@@ -186,8 +174,6 @@
             this.dgv_listuser.EmbeddedNavigator.ToolTipTitle = resources.GetString("dgv_listuser.EmbeddedNavigator.ToolTipTitle");
             this.dgv_listuser.MainView = this.gridView1;
             this.dgv_listuser.Name = "dgv_listuser";
-            this.dgv_listuser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btn_delete});
             this.dgv_listuser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -197,11 +183,10 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn4});
             this.gridView1.GridControl = this.dgv_listuser;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowCellDefaultAlignment += new DevExpress.XtraGrid.Views.Base.RowCellAlignmentEventHandler(this.gridView1_RowCellDefaultAlignment);
             // 
@@ -210,49 +195,24 @@
             resources.ApplyResources(this.gridColumn1, "gridColumn1");
             this.gridColumn1.FieldName = "UserName";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem()});
             // 
             // gridColumn2
             // 
             resources.ApplyResources(this.gridColumn2, "gridColumn2");
             this.gridColumn2.FieldName = "Password";
             this.gridColumn2.Name = "gridColumn2";
-            // 
-            // gridColumn3
-            // 
-            resources.ApplyResources(this.gridColumn3, "gridColumn3");
-            this.gridColumn3.FieldName = "IdRole";
-            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn2.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem()});
             // 
             // gridColumn4
             // 
             resources.ApplyResources(this.gridColumn4, "gridColumn4");
             this.gridColumn4.FieldName = "Nhanvien";
             this.gridColumn4.Name = "gridColumn4";
-            // 
-            // gridColumn5
-            // 
-            resources.ApplyResources(this.gridColumn5, "gridColumn5");
-            this.gridColumn5.ColumnEdit = this.btn_delete;
-            this.gridColumn5.Name = "gridColumn5";
-            // 
-            // btn_delete
-            // 
-            resources.ApplyResources(this.btn_delete, "btn_delete");
-            resources.ApplyResources(serializableAppearanceObject1, "serializableAppearanceObject1");
-            this.btn_delete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("btn_delete.Buttons"))), resources.GetString("btn_delete.Buttons1"), ((int)(resources.GetObject("btn_delete.Buttons2"))), ((bool)(resources.GetObject("btn_delete.Buttons3"))), ((bool)(resources.GetObject("btn_delete.Buttons4"))), ((bool)(resources.GetObject("btn_delete.Buttons5"))), ((DevExpress.XtraEditors.ImageLocation)(resources.GetObject("btn_delete.Buttons6"))), ((System.Drawing.Image)(resources.GetObject("btn_delete.Buttons7"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, resources.GetString("btn_delete.Buttons8"), ((object)(resources.GetObject("btn_delete.Buttons9"))), ((DevExpress.Utils.SuperToolTip)(resources.GetObject("btn_delete.Buttons10"))), ((bool)(resources.GetObject("btn_delete.Buttons11"))))});
-            this.btn_delete.Mask.AutoComplete = ((DevExpress.XtraEditors.Mask.AutoCompleteType)(resources.GetObject("btn_delete.Mask.AutoComplete")));
-            this.btn_delete.Mask.BeepOnError = ((bool)(resources.GetObject("btn_delete.Mask.BeepOnError")));
-            this.btn_delete.Mask.EditMask = resources.GetString("btn_delete.Mask.EditMask");
-            this.btn_delete.Mask.IgnoreMaskBlank = ((bool)(resources.GetObject("btn_delete.Mask.IgnoreMaskBlank")));
-            this.btn_delete.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("btn_delete.Mask.MaskType")));
-            this.btn_delete.Mask.PlaceHolder = ((char)(resources.GetObject("btn_delete.Mask.PlaceHolder")));
-            this.btn_delete.Mask.SaveLiteral = ((bool)(resources.GetObject("btn_delete.Mask.SaveLiteral")));
-            this.btn_delete.Mask.ShowPlaceHolders = ((bool)(resources.GetObject("btn_delete.Mask.ShowPlaceHolders")));
-            this.btn_delete.Mask.UseMaskAsDisplayFormat = ((bool)(resources.GetObject("btn_delete.Mask.UseMaskAsDisplayFormat")));
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem()});
             // 
             // frm_ManagerUser
             // 
@@ -270,7 +230,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_username.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listuser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_delete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,20 +241,15 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_delete;
         private DevExpress.XtraEditors.SimpleButton btn_Edit;
         private DevExpress.XtraEditors.SimpleButton btn_them;
-        private System.Windows.Forms.ComboBox cbb_role;
         private DevExpress.XtraEditors.TextEdit txt_nhanvien;
         private DevExpress.XtraEditors.TextEdit txt_password;
         private DevExpress.XtraEditors.TextEdit txt_username;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-
+        private DevExpress.XtraEditors.SimpleButton btn_delete_user;
     }
 }

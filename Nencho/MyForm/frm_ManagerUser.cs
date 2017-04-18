@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace Nencho.MyForm
 {
@@ -11,14 +12,6 @@ namespace Nencho.MyForm
         public frm_ManagerUser()
         {
             InitializeComponent();
-        }
-
-        private void frm_ManagerUser_Load(object sender, EventArgs e)
-        {
-            dgv_listuser.DataSource = Global.DataNencho.GetListUser();
-            cbb_role.DataSource = Global.DataNencho.GetListRole();
-            cbb_role.DisplayMember = "RoleName";
-            cbb_role.ValueMember = "IdRole";
         }
 
         public static string GetMd5Hash(string input)
@@ -35,83 +28,157 @@ namespace Nencho.MyForm
             return sBuilder.ToString();
         }
 
-        private void btn_delete_Click(object sender, EventArgs e)
+        private void frm_ManagerUser_Load(object sender, EventArgs e)
         {
-            string username = gridView1.GetFocusedRowCellValue("UserName") != null ? gridView1.GetFocusedRowCellValue("UserName").ToString() : "";
-            DialogResult thongbao = MessageBox.Show("Bạn chắc chắn muốn xóa UserName '" + username + "'", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (thongbao == DialogResult.Yes)
+            dgv_listuser.DataSource = Global.DataNencho.GetListUser();
+        }
+       
+        private void gridView1_RowCellDefaultAlignment(object sender, DevExpress.XtraGrid.Views.Base.RowCellAlignmentEventArgs e)
+        {
+            try
             {
-                if (!string.IsNullOrEmpty(username))
-                {
-                    Global.DataNencho.DeleteUsername(username);
-                    frm_ManagerUser_Load(sender, e);
-                }
-                else
-                {
-                    MessageBox.Show("Username không tồn tại, không thể xóa!");
-                }
+                string Username, Password, nhanvien;
+
+                Username = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UserName")!=null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UserName").ToString():"";
+                Password = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password")!= null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString():"";
+                nhanvien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Nhanvien")!=null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Nhanvien").ToString():"";
+
+                txt_username.Text = Username;
+                txt_password.Text = Password;
+                txt_nhanvien.Text = nhanvien;
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show("Error: " + i);
             }
         }
 
-        private void gridView1_RowCellDefaultAlignment(object sender, DevExpress.XtraGrid.Views.Base.RowCellAlignmentEventArgs e)
-        {
-            string Username, Password, roleid, nhanvien;
-
-            Username = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "UserName").ToString();
-            Password = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString();
-            roleid = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IdRole").ToString();
-            nhanvien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Nhanvien").ToString();
-
-            txt_username.Text = Username;
-            txt_password.Text = Password;
-            txt_nhanvien.Text = nhanvien;
-            cbb_role.SelectedValue = roleid;}
-
         private void btn_them_Click(object sender, EventArgs e)
         {
-            string pass = GetMd5Hash(txt_password.Text);
-            string roleid = cbb_role.SelectedValue != null ? cbb_role.SelectedValue.ToString() : "";
-
-            if (!string.IsNullOrEmpty(roleid) && !string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(pass))
+            try
             {
-                int r = Global.DataNencho.InsertUser(txt_username.Text, pass, roleid, txt_nhanvien.Text);
-                if (r == 0)
+                var token = (from w in Global.DataNencho.GetToken(Global.StrUsername) select w.Token).FirstOrDefault();
+                if (token == Global.Strtoken)
                 {
-                    MessageBox.Show("UserName đã tồn tại, Vui lòng nhập UserName khác !");
+                    string pass = GetMd5Hash(txt_password.Text);
+
+                    if (!string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(pass))
+                    {
+                        int r = Global.DataNencho.InsertUser(txt_username.Text, pass, null, txt_nhanvien.Text);
+                        if (r == 0)
+                        {
+                            MessageBox.Show("UserName already exists, Please enter another UserName !");
+                        }
+                        if (r == 1)
+                        {
+                            MessageBox.Show("Added UserName '" + txt_username.Text + "' !");
+                            frm_ManagerUser_Load(sender, e);
+                            txt_username.Text = "";
+                            txt_nhanvien.Text = "";
+                            txt_password.Text = "";
+                            txt_username.Focus();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter the full information before saving!");
+                    }
                 }
-                if (r == 1)
+                else
                 {
-                    MessageBox.Show("Đã thêm UserName '" + txt_username.Text + "' !");
-                    frm_ManagerUser_Load(sender, e);
-                    txt_username.Text = "";
-                    txt_nhanvien.Text = "";
-                    txt_password.Text = "";
-                    txt_username.Focus();
+                    MessageBox.Show("Your username is logged in on another PC, please log in again and repeat transactions!");
                 }
             }
-            else
+            catch (Exception i)
             {
-                MessageBox.Show("Nhập đầy đủ thông tin trước khi lưu !");
+                MessageBox.Show("Error: " + i);
             }
         }
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            string pass = GetMd5Hash(txt_password.Text);
-            string roleid = cbb_role.SelectedValue != null ? cbb_role.SelectedValue.ToString() : "";
-
-            if (!string.IsNullOrEmpty(roleid) && !string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(pass))
+            try
             {
-                DialogResult thongbao = MessageBox.Show("Bạn chắc chắn muốn sửa UserName '" + txt_username.Text + "'", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (thongbao == DialogResult.Yes)
+                var token = (from w in Global.DataNencho.GetToken(Global.StrUsername) select w.Token).FirstOrDefault();
+                if (token == Global.Strtoken)
                 {
-                    Global.DataNencho.UpdateUser(txt_username.Text, pass, roleid, txt_nhanvien.Text);
-                    frm_ManagerUser_Load(sender, e);
+                    string pass = GetMd5Hash(txt_password.Text);
+
+                    if (!string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) &&
+                        !string.IsNullOrEmpty(pass))
+                    {
+                        DialogResult thongbao =
+                            MessageBox.Show("You sure want to edit UserName information '" + txt_username.Text + "'",
+                                "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (thongbao == DialogResult.Yes)
+                        {
+                            Global.DataNencho.UpdateUser(txt_username.Text, pass, null, txt_nhanvien.Text);
+                            frm_ManagerUser_Load(sender, e);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter the full information before saving!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Your user is logged in on another PC, please log in again and repeat transactions!!");
                 }
             }
-            else
+            catch (Exception i)
             {
-                MessageBox.Show("Nhập đầy đủ thông tin trước khi lưu !");
+                MessageBox.Show("Error: " + i);
+            }
+        }
+        
+        private void repositoryItemButtonEdit2_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            try
+            {
+                string username = gridView1.GetFocusedRowCellValue("UserName") != null ? gridView1.GetFocusedRowCellValue("UserName").ToString() : "";
+                DialogResult thongbao = MessageBox.Show("You sure you want to delete UserName '" + username + "'", "Affirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (thongbao == DialogResult.Yes)
+                {
+                    if (!string.IsNullOrEmpty(username))
+                    {
+                        Global.DataNencho.DeleteUsername(username);
+                        frm_ManagerUser_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username does not exist, can't removed!");
+                    }
+                }
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show("Error: " + i);
+            }
+        }
+
+        private void btn_delete_user_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string username = gridView1.GetFocusedRowCellValue("UserName") != null ? gridView1.GetFocusedRowCellValue("UserName").ToString() : "";
+                DialogResult thongbao = MessageBox.Show("You sure you want to delete UserName '" + username + "'", "Affirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (thongbao == DialogResult.Yes)
+                {
+                    if (!string.IsNullOrEmpty(username))
+                    {
+                        Global.DataNencho.DeleteUsername(username);
+                        frm_ManagerUser_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username does not exist, can't removed!");
+                    }
+                }
+            }
+            catch (Exception i)
+            {
+                MessageBox.Show("Error: " + i);
             }
         }
     }

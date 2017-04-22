@@ -183,8 +183,11 @@
       <Column Name="Date_ReadFile_Check_2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="SubmitFile_Check_2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="Date_SubmitFile_Check_2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Error_Admin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Date_Change" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TienDoCheck1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="TienDoCheck2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TienDoAdmin" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.tbl_Input" Member="tbl_Inputs">
@@ -333,6 +336,15 @@
   <Function Name="dbo.CheckTruong_38" Method="CheckTruong_38">
     <Parameter Name="Truong38" Parameter="truong38" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ChiTietTienDo_Admin" Method="ChiTietTienDo_Admin">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ChiTietTienDo_AdminResult">
+      <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Cot_Z" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ThongTin" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.ChiTietTienDo_Checker1" Method="ChiTietTienDo_Checker1">
     <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
@@ -1006,6 +1018,13 @@
     <Parameter Name="Truong_67" Parameter="truong_67" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.ThongKeTienDo_Admin" Method="ThongKeTienDo_Admin">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ThongKeTienDo_AdminResult">
+      <Column Name="name" Type="System.String" DbType="NVarChar(23) NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ThongKeTienDo_Checker1" Method="ThongKeTienDo_Checker1">
     <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
     <ElementType Name="ThongKeTienDo_Checker1Result">
@@ -1098,6 +1117,11 @@
   </Function>
   <Function Name="dbo.Update_TableFile_Admin" Method="Update_TableFile_Admin">
     <Parameter Name="batchno" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Update_TableFile_Admin_Complete" Method="Update_TableFile_Admin_Complete">
+    <Parameter Name="batchno" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="cot_g" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.Update_TableFile_Checker1" Method="Update_TableFile_Checker1">
@@ -1239,6 +1263,19 @@
       <Column Name="Cot_G" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_37" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_38" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NangSuatAdmin" Method="NangSuatAdmin">
+    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="NangSuatAdminResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Nhanvien" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuSai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="HieuSuat" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

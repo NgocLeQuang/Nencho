@@ -43,6 +43,7 @@
             this.btn_ManagerFiles = new DevExpress.XtraBars.BarButtonItem();
             this.btn_manageruser = new DevExpress.XtraBars.BarButtonItem();
             this.btn_nangsuat = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_tiendo = new DevExpress.XtraBars.BarButtonItem();
             this.baritem_Option = new DevExpress.XtraBars.BarSubItem();
             this.btn_adddata = new DevExpress.XtraBars.BarButtonItem();
             this.btn_ExportExcel = new DevExpress.XtraBars.BarButtonItem();
@@ -253,7 +254,6 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.cbb_batchno_error = new System.Windows.Forms.ComboBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.btn_tiendo = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_96)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_97)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LookUpEdit_98)).BeginInit();
@@ -471,6 +471,13 @@
             this.btn_nangsuat.Id = 17;
             this.btn_nangsuat.Name = "btn_nangsuat";
             this.btn_nangsuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_nangsuat_ItemClick);
+            // 
+            // btn_tiendo
+            // 
+            resources.ApplyResources(this.btn_tiendo, "btn_tiendo");
+            this.btn_tiendo.Id = 18;
+            this.btn_tiendo.Name = "btn_tiendo";
+            this.btn_tiendo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tiendo_ItemClick);
             // 
             // baritem_Option
             // 
@@ -853,6 +860,7 @@
             this.panelControl6.Controls.Add(this.labelControl5);
             resources.ApplyResources(this.panelControl6, "panelControl6");
             this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl6_Paint);
             // 
             // cbb_batchno_division
             // 
@@ -2555,13 +2563,6 @@
             // 
             resources.ApplyResources(this.labelControl9, "labelControl9");
             this.labelControl9.Name = "labelControl9";
-            // 
-            // btn_tiendo
-            // 
-            resources.ApplyResources(this.btn_tiendo, "btn_tiendo");
-            this.btn_tiendo.Id = 18;
-            this.btn_tiendo.Name = "btn_tiendo";
-            this.btn_tiendo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tiendo_ItemClick);
             // 
             // frm_Main
             // 

@@ -42,7 +42,7 @@ namespace Nencho.MyForm
                     loai = "CHECKER1";
                     btn_ChiTiet.Visible = true;
                 }
-                else
+                else if (radioGroup1.Properties.Items[radioGroup1.SelectedIndex].Value == "CHECKER2")
                 {
                     chartControl1.DataSource = null;
                     chartControl1.Series.Clear();
@@ -51,11 +51,27 @@ namespace Nencho.MyForm
                     series1.ArgumentScaleType = ScaleType.Qualitative;
                     series1.ArgumentDataMember = "name";
                     series1.ValueScaleType = ScaleType.Numerical;
+                    series1.ValueDataMembers.AddRange(new string[] {"soluong"});
+                    chartControl1.Series.Add(series1);
+                    ((PiePointOptions) series1.Label.PointOptions).PointView = PointView.ArgumentAndValues;
+                    chartControl1.PaletteName = "Palette 1";
+                    loai = "CHECKER2";
+                    btn_ChiTiet.Visible = true;
+                }
+                else
+                {
+                    chartControl1.DataSource = null;
+                    chartControl1.Series.Clear();
+                    chartControl1.DataSource = Global.DataNencho.ThongKeTienDo_Admin(cbb_Batch.Text);
+                    Series series1 = new Series("Series1", ViewType.Pie);
+                    series1.ArgumentScaleType = ScaleType.Qualitative;
+                    series1.ArgumentDataMember = "name";
+                    series1.ValueScaleType = ScaleType.Numerical;
                     series1.ValueDataMembers.AddRange(new string[] { "soluong" });
                     chartControl1.Series.Add(series1);
                     ((PiePointOptions)series1.Label.PointOptions).PointView = PointView.ArgumentAndValues;
-                    chartControl1.PaletteName = "Palette 1";
-                    loai = "CHECKER2";
+                    chartControl1.PaletteName = "Palette 2";
+                    loai = "ADMIN";
                     btn_ChiTiet.Visible = true;
                 }
                

@@ -3107,6 +3107,12 @@
   <data name="&gt;&gt;btn_nangsuat.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;btn_tiendo.Name" xml:space="preserve">
+    <value>btn_tiendo</value>
+  </data>
+  <data name="&gt;&gt;btn_tiendo.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;baritem_Option.Name" xml:space="preserve">
     <value>baritem_Option</value>
   </data>
@@ -4042,12 +4048,6 @@
   </data>
   <data name="&gt;&gt;repositoryItemLookUpEdit6.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btn_tiendo.Name" xml:space="preserve">
-    <value>btn_tiendo</value>
-  </data>
-  <data name="&gt;&gt;btn_tiendo.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frm_Main</value>

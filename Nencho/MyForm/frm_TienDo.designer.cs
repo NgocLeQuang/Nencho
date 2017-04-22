@@ -64,18 +64,19 @@
             this.radioGroup1.EditValue = "DESO";
             this.radioGroup1.Location = new System.Drawing.Point(575, 30);
             this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Columns = 2;
+            this.radioGroup1.Properties.Columns = 3;
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("CHECKER1", "Checker 1"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("CHECKER2", "Checker 2")});
-            this.radioGroup1.Size = new System.Drawing.Size(153, 23);
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("CHECKER2", "Checker 2"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("ADMIN", "Admin")});
+            this.radioGroup1.Size = new System.Drawing.Size(220, 23);
             this.radioGroup1.TabIndex = 3;
             this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
             // btn_ChiTiet
             // 
             this.btn_ChiTiet.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_ChiTiet.Location = new System.Drawing.Point(734, 30);
+            this.btn_ChiTiet.Location = new System.Drawing.Point(801, 30);
             this.btn_ChiTiet.Name = "btn_ChiTiet";
             this.btn_ChiTiet.Size = new System.Drawing.Size(75, 23);
             this.btn_ChiTiet.TabIndex = 2;
@@ -111,12 +112,17 @@
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Location = new System.Drawing.Point(0, 82);
             this.chartControl1.Name = "chartControl1";
-            this.chartControl1.PaletteName = "Palette 1";
+            this.chartControl1.PaletteName = "Palette 2";
             this.chartControl1.PaletteRepository.Add("Palette 1", new DevExpress.XtraCharts.Palette("Palette 1", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.Silver, System.Drawing.Color.Silver),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(64))))), System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(64)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(64))))), System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.Green, System.Drawing.Color.Green)}));
+            this.chartControl1.PaletteRepository.Add("Palette 2", new DevExpress.XtraCharts.Palette("Palette 2", DevExpress.XtraCharts.PaletteScaleMode.Repeat, new DevExpress.XtraCharts.PaletteEntry[] {
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.Silver, System.Drawing.Color.Silver),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(64))))), System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))))),
+                new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))))),
                 new DevExpress.XtraCharts.PaletteEntry(System.Drawing.Color.Green, System.Drawing.Color.Green)}));
             series1.Name = "Series 1";
             series1.View = pieSeriesView1;

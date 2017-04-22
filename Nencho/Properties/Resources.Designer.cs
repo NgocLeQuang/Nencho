@@ -93,6 +93,16 @@ namespace Nencho.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Productivity_Admin {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_Admin", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Productivity_Checker1 {
             get {
                 object obj = ResourceManager.GetObject("Productivity_Checker1", resourceCulture);

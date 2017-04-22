@@ -235,6 +235,13 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDo_Admin")]
+		public ISingleResult<ChiTietTienDo_AdminResult> ChiTietTienDo_Admin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((ISingleResult<ChiTietTienDo_AdminResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ChiTietTienDo_Checker1")]
 		public ISingleResult<ChiTietTienDo_Checker1Result> ChiTietTienDo_Checker1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
 		{
@@ -721,6 +728,13 @@ namespace Nencho
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeTienDo_Admin")]
+		public ISingleResult<ThongKeTienDo_AdminResult> ThongKeTienDo_Admin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((ISingleResult<ThongKeTienDo_AdminResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeTienDo_Checker1")]
 		public ISingleResult<ThongKeTienDo_Checker1Result> ThongKeTienDo_Checker1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
 		{
@@ -811,6 +825,13 @@ namespace Nencho
 		public int Update_TableFile_Admin([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string batchno)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchno);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Update_TableFile_Admin_Complete")]
+		public int Update_TableFile_Admin_Complete([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string batchno, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string cot_g)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), batchno, cot_g);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -973,6 +994,13 @@ namespace Nencho
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fBatchName);
 			return ((ISingleResult<XuatDuLieuLichSuResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NangSuatAdmin")]
+		public ISingleResult<NangSuatAdminResult> NangSuatAdmin([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuNgay", DbType="DateTime")] System.Nullable<System.DateTime> tuNgay, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenNgay", DbType="DateTime")] System.Nullable<System.DateTime> denNgay)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tuNgay, denNgay);
+			return ((ISingleResult<NangSuatAdminResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -3558,9 +3586,15 @@ namespace Nencho
 		
 		private System.Nullable<System.DateTime> _Date_SubmitFile_Check_2;
 		
+		private System.Nullable<bool> _Error_Admin;
+		
+		private System.Nullable<System.DateTime> _Date_Change;
+		
 		private string _TienDoCheck1;
 		
 		private string _TienDoCheck2;
+		
+		private string _TienDoAdmin;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3676,10 +3710,16 @@ namespace Nencho
     partial void OnSubmitFile_Check_2Changed();
     partial void OnDate_SubmitFile_Check_2Changing(System.Nullable<System.DateTime> value);
     partial void OnDate_SubmitFile_Check_2Changed();
+    partial void OnError_AdminChanging(System.Nullable<bool> value);
+    partial void OnError_AdminChanged();
+    partial void OnDate_ChangeChanging(System.Nullable<System.DateTime> value);
+    partial void OnDate_ChangeChanged();
     partial void OnTienDoCheck1Changing(string value);
     partial void OnTienDoCheck1Changed();
     partial void OnTienDoCheck2Changing(string value);
     partial void OnTienDoCheck2Changed();
+    partial void OnTienDoAdminChanging(string value);
+    partial void OnTienDoAdminChanged();
     #endregion
 		
 		public tbl_File()
@@ -4787,6 +4827,46 @@ namespace Nencho
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Error_Admin", DbType="Bit")]
+		public System.Nullable<bool> Error_Admin
+		{
+			get
+			{
+				return this._Error_Admin;
+			}
+			set
+			{
+				if ((this._Error_Admin != value))
+				{
+					this.OnError_AdminChanging(value);
+					this.SendPropertyChanging();
+					this._Error_Admin = value;
+					this.SendPropertyChanged("Error_Admin");
+					this.OnError_AdminChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_Change", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date_Change
+		{
+			get
+			{
+				return this._Date_Change;
+			}
+			set
+			{
+				if ((this._Date_Change != value))
+				{
+					this.OnDate_ChangeChanging(value);
+					this.SendPropertyChanging();
+					this._Date_Change = value;
+					this.SendPropertyChanged("Date_Change");
+					this.OnDate_ChangeChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TienDoCheck1", DbType="NVarChar(255)")]
 		public string TienDoCheck1
 		{
@@ -4823,6 +4903,26 @@ namespace Nencho
 					this._TienDoCheck2 = value;
 					this.SendPropertyChanged("TienDoCheck2");
 					this.OnTienDoCheck2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TienDoAdmin", DbType="NVarChar(255)")]
+		public string TienDoAdmin
+		{
+			get
+			{
+				return this._TienDoAdmin;
+			}
+			set
+			{
+				if ((this._TienDoAdmin != value))
+				{
+					this.OnTienDoAdminChanging(value);
+					this.SendPropertyChanging();
+					this._TienDoAdmin = value;
+					this.SendPropertyChanged("TienDoAdmin");
+					this.OnTienDoAdminChanged();
 				}
 			}
 		}
@@ -7226,6 +7326,86 @@ namespace Nencho
 				if ((this._Truong_74 != value))
 				{
 					this._Truong_74 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ChiTietTienDo_AdminResult
+	{
+		
+		private string _Cot_G;
+		
+		private string _Cot_Z;
+		
+		private string _UserName;
+		
+		private string _ThongTin;
+		
+		public ChiTietTienDo_AdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_G", DbType="NVarChar(255)")]
+		public string Cot_G
+		{
+			get
+			{
+				return this._Cot_G;
+			}
+			set
+			{
+				if ((this._Cot_G != value))
+				{
+					this._Cot_G = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cot_Z", DbType="NVarChar(255)")]
+		public string Cot_Z
+		{
+			get
+			{
+				return this._Cot_Z;
+			}
+			set
+			{
+				if ((this._Cot_Z != value))
+				{
+					this._Cot_Z = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThongTin", DbType="NVarChar(255)")]
+		public string ThongTin
+		{
+			get
+			{
+				return this._ThongTin;
+			}
+			set
+			{
+				if ((this._ThongTin != value))
+				{
+					this._ThongTin = value;
 				}
 			}
 		}
@@ -12631,6 +12811,50 @@ namespace Nencho
 		}
 	}
 	
+	public partial class ThongKeTienDo_AdminResult
+	{
+		
+		private string _name;
+		
+		private int _soluong;
+		
+		public ThongKeTienDo_AdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(23) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
+		public int soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
+		}
+	}
+	
 	public partial class ThongKeTienDo_Checker1Result
 	{
 		
@@ -13036,6 +13260,140 @@ namespace Nencho
 				if ((this._Truong_38 != value))
 				{
 					this._Truong_38 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class NangSuatAdminResult
+	{
+		
+		private string _UserName;
+		
+		private string _Nhanvien;
+		
+		private System.Nullable<int> _SoPhieuNhap;
+		
+		private System.Nullable<int> _PhieuDung;
+		
+		private System.Nullable<int> _PhieuSai;
+		
+		private string _ThoiGian;
+		
+		private System.Nullable<double> _HieuSuat;
+		
+		public NangSuatAdminResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(255)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nhanvien", DbType="NVarChar(200)")]
+		public string Nhanvien
+		{
+			get
+			{
+				return this._Nhanvien;
+			}
+			set
+			{
+				if ((this._Nhanvien != value))
+				{
+					this._Nhanvien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoPhieuNhap", DbType="Int")]
+		public System.Nullable<int> SoPhieuNhap
+		{
+			get
+			{
+				return this._SoPhieuNhap;
+			}
+			set
+			{
+				if ((this._SoPhieuNhap != value))
+				{
+					this._SoPhieuNhap = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhieuDung", DbType="Int")]
+		public System.Nullable<int> PhieuDung
+		{
+			get
+			{
+				return this._PhieuDung;
+			}
+			set
+			{
+				if ((this._PhieuDung != value))
+				{
+					this._PhieuDung = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhieuSai", DbType="Int")]
+		public System.Nullable<int> PhieuSai
+		{
+			get
+			{
+				return this._PhieuSai;
+			}
+			set
+			{
+				if ((this._PhieuSai != value))
+				{
+					this._PhieuSai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGian", DbType="VarChar(7)")]
+		public string ThoiGian
+		{
+			get
+			{
+				return this._ThoiGian;
+			}
+			set
+			{
+				if ((this._ThoiGian != value))
+				{
+					this._ThoiGian = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HieuSuat", DbType="Float")]
+		public System.Nullable<double> HieuSuat
+		{
+			get
+			{
+				return this._HieuSuat;
+			}
+			set
+			{
+				if ((this._HieuSuat != value))
+				{
+					this._HieuSuat = value;
 				}
 			}
 		}

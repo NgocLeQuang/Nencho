@@ -988,6 +988,18 @@ namespace Nencho.MyForm
                 {
                     Global.DataNencho.Update_TableFile_Checker2_NoError(cbb_batchno_admin.Text, cot_g);
                 }
+                if (string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_53") != null? dgv_admin.GetRowCellValue(i, "Truong_53").ToString(): "") &&
+                    string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_54") != null? dgv_admin.GetRowCellValue(i, "Truong_54").ToString(): "") &&
+                    string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_55") != null? dgv_admin.GetRowCellValue(i, "Truong_55").ToString(): "") &&
+                    string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_56") != null? dgv_admin.GetRowCellValue(i, "Truong_56").ToString(): "") &&
+                    string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_60") != null? dgv_admin.GetRowCellValue(i, "Truong_60").ToString(): "") &&
+                    string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_61") != null? dgv_admin.GetRowCellValue(i, "Truong_61").ToString(): "") &&
+                    string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_62") != null? dgv_admin.GetRowCellValue(i, "Truong_62").ToString(): "") &&
+                    string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_63") != null? dgv_admin.GetRowCellValue(i, "Truong_63").ToString(): ""))
+                {
+                    Global.DataNencho.Update_TableFile_Admin_Complete(cbb_batchno_admin.Text, cot_g);
+                }
+                else {}
                 Global.DataNencho.Update_TableFile_Admin(cbb_batchno_admin.Text);
             }
         }
@@ -1051,6 +1063,17 @@ namespace Nencho.MyForm
                                 Global.DataNencho.Update_TableFile_Checker2_Error(batch, cot_g);
                                 Global.DataNencho.DeleteData_Check(cot_g, batch);
                             }
+                        }
+                        if (string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_53") != null ? dgv_admin.GetRowCellValue(i, "Truong_53").ToString() : "") &&
+                              string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_54") != null ? dgv_admin.GetRowCellValue(i, "Truong_54").ToString() : "") &&
+                              string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_55") != null ? dgv_admin.GetRowCellValue(i, "Truong_55").ToString() : "") &&
+                              string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_56") != null ? dgv_admin.GetRowCellValue(i, "Truong_56").ToString() : "") &&
+                              string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_60") != null ? dgv_admin.GetRowCellValue(i, "Truong_60").ToString() : "") &&
+                              string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_61") != null ? dgv_admin.GetRowCellValue(i, "Truong_61").ToString() : "") &&
+                              string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_62") != null ? dgv_admin.GetRowCellValue(i, "Truong_62").ToString() : "") &&
+                              string.IsNullOrEmpty(dgv_admin.GetRowCellValue(i, "Truong_63") != null ? dgv_admin.GetRowCellValue(i, "Truong_63").ToString() : ""))
+                        {
+                            Global.DataNencho.Update_TableFile_Admin_Complete(cbb_batchno_admin.Text, cot_g);
                         }
                     }
                 }
@@ -1859,5 +1882,10 @@ namespace Nencho.MyForm
         private void btn_tiendo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             new frm_TienDo().ShowDialog();}
+
+        private void panelControl6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

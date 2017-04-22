@@ -23,23 +23,36 @@ namespace Nencho.MyForm
             {
                 lb_SoHinhChuaNhap.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck1 == "Image not processed" select w.Cot_G).Count().ToString();
                 lb_SoHinhDangNhap.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck1 == "Image is doing" select w.Cot_G).Count().ToString();
-                lb_SoHinhDangNhap.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck1 == "Image waiting for check" select w.Cot_G).Count().ToString();
-                lb_SoHinhDangCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck1 == "Image is checking" select w.Cot_G).Count().ToString();
+                lb_SoHinhChoCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck1 == "Image waiting for check" select w.Cot_G).Count().ToString();
+                lb_SoHinhDangCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck1 == "Image is Entered" select w.Cot_G).Count().ToString();
+                labelControl5.Text = " Image is Entered:";
                 lb_SoHinhHoanThanh.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck1 == "Image completed" select w.Cot_G).Count().ToString();
 
                 gridControl1.DataSource = null;
                 gridControl1.DataSource = Global.DataNencho.ChiTietTienDo_Checker1(lb_fBatchName.Text);
                 gridView1.RowCellStyle += GridView1_RowCellStyle;
             }
-            else
+            else if(Loai == "CHECKER2")
             {
                 lb_SoHinhChuaNhap.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck2 == "Image not processed" select w.Cot_G).Count().ToString();
                 lb_SoHinhDangNhap.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck2 == "Image is doing" select w.Cot_G).Count().ToString();
                 lb_SoHinhChoCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck2 == "Image waiting for check" select w.Cot_G).Count().ToString();
-                lb_SoHinhDangCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck2 == "Image is checking" select w.Cot_G).Count().ToString();
+                lb_SoHinhDangCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck2 == "Image is Entered" select w.Cot_G).Count().ToString();
+                labelControl5.Text = " Image is Entered:";
                 lb_SoHinhHoanThanh.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoCheck2 == "Image completed" select w.Cot_G).Count().ToString();
                 gridControl1.DataSource = null;
                 gridControl1.DataSource = Global.DataNencho.ChiTietTienDo_Checker2(lb_fBatchName.Text);
+                gridView1.RowCellStyle += GridView1_RowCellStyle;
+            }
+            else
+            {
+                lb_SoHinhChuaNhap.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoAdmin == "Image not processed" select w.Cot_G).Count().ToString();
+                lb_SoHinhDangNhap.Text = "0";
+                lb_SoHinhChoCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoAdmin == "Image waiting for check" select w.Cot_G).Count().ToString();
+                lb_SoHinhDangCheck.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoAdmin == "Image is checking" select w.Cot_G).Count().ToString();
+                lb_SoHinhHoanThanh.Text = (from w in Global.DataNencho.tbl_Files where w.fBatchName == lb_fBatchName.Text && w.TienDoAdmin == "Image completed" select w.Cot_G).Count().ToString();
+                gridControl1.DataSource = null;
+                gridControl1.DataSource = Global.DataNencho.ChiTietTienDo_Admin(lb_fBatchName.Text);
                 gridView1.RowCellStyle += GridView1_RowCellStyle;
             }
         }
@@ -56,15 +69,21 @@ namespace Nencho.MyForm
                     e.Appearance.BackColor = Color.HotPink;
                     e.Appearance.BackColor2 = Color.White;e.Appearance.ForeColor = Color.White;
                 }
+                else if (category == "Image is Entered")
+                {
+                    e.Appearance.BackColor = Color.DarkOrange;
+                    e.Appearance.BackColor2 = Color.White;
+                    e.Appearance.ForeColor = Color.White;
+                }
                 else if (category == "Image waiting for check")
                 {
-                    e.Appearance.BackColor = Color.OrangeRed;
+                    e.Appearance.BackColor = Color.DarkRed;
                     e.Appearance.BackColor2 = Color.White;
                     e.Appearance.ForeColor = Color.White;
                 }
                 else if (category == "Image is checking")
                 {
-                    e.Appearance.BackColor = Color.Purple;
+                    e.Appearance.BackColor = Color.BlueViolet;
                     e.Appearance.BackColor2 = Color.White;
                     e.Appearance.ForeColor = Color.White;
                 }

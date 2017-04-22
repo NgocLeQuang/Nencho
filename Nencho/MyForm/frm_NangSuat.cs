@@ -30,6 +30,7 @@ namespace Nencho.MyForm
         {
             gridControl_DeSo.DataSource = Global.DataNencho.NangSuatCheck1(TuNgay, DenNgay);
             gridControl_DeJP.DataSource = Global.DataNencho.NangSuatCheck2(TuNgay, DenNgay);
+            gridControl_admin.DataSource = Global.DataNencho.NangSuatAdmin(TuNgay, DenNgay);
         }
         
         private void dtp_FirstDay_ValueChanged(object sender, EventArgs e)
@@ -98,9 +99,13 @@ namespace Nencho.MyForm
                 {
                     saveFileDialog1.FileName = "Performance_Checker2_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
                 }
-                else if(xtraTabControl1.SelectedTabPage==tp_DeSo)
+                else if (xtraTabControl1.SelectedTabPage == tp_DeSo)
                 {
                     saveFileDialog1.FileName = "Performance_Checker1_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
+                }
+                else if (xtraTabControl1.SelectedTabPage == tp_admin)
+                {
+                    saveFileDialog1.FileName = "Performance_Admin_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
                 }
                 saveFileDialog1.RestoreDirectory = true;
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -146,7 +151,7 @@ namespace Nencho.MyForm
                 }
                 TableToExcel((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Productivity_Checker2.xls"), dataGridView1);
             }
-            else if(xtraTabControl1.SelectedTabPage==tp_DeSo)
+            else if (xtraTabControl1.SelectedTabPage == tp_DeSo)
             {
                 dataGridView1.DataSource = Global.DataNencho.NangSuatCheck1(_firstDateTime, _lastDateTime);
                 if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Productivity_Checker1.xls"))
@@ -159,6 +164,20 @@ namespace Nencho.MyForm
                     File.WriteAllBytes((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Productivity_Checker1.xls"), Resources.Productivity_Checker1);
                 }
                 TableToExcel((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Productivity_Checker1.xls"), dataGridView1);
+            }
+            else if (xtraTabControl1.SelectedTabPage == tp_admin)
+            {
+                dataGridView1.DataSource = Global.DataNencho.NangSuatAdmin(_firstDateTime, _lastDateTime);
+                if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Productivity_Admin.xls"))
+                {
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Productivity_Admin.xls");
+                    File.WriteAllBytes((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Productivity_Admin.xls"), Resources.Productivity_Admin);
+                }
+                else
+                {
+                    File.WriteAllBytes((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Productivity_Admin.xls"), Resources.Productivity_Admin);
+                }
+                TableToExcel((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Productivity_Admin.xls"), dataGridView1);
             }
         }
     }

@@ -270,6 +270,7 @@
     <None Include="Resources\DuLieuDacBiet.xlsx" />
     <None Include="Resources\FileXuatTong.xlsx" />
     <None Include="Resources\ListLichSu.xlsx" />
+    <None Include="Resources\Productivity_Admin.xls" />
     <None Include="Resources\Productivity_Checker1.xls" />
     <None Include="Resources\Productivity_Checker2.xls" />
   </ItemGroup>

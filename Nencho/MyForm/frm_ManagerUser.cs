@@ -44,7 +44,7 @@ namespace Nencho.MyForm
                 nhanvien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Nhanvien")!=null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Nhanvien").ToString():"";
 
                 txt_username.Text = Username;
-                txt_password.Text = Password;
+                //txt_password.Text = Password;
                 txt_nhanvien.Text = nhanvien;
             }
             catch (Exception i)

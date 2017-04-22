@@ -57,6 +57,16 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tp_admin = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl_admin = new DevExpress.XtraGrid.GridControl();
+            this.dgv_admin = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +78,9 @@
             this.tp_DeJP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_DeJP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DeJP)).BeginInit();
+            this.tp_admin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_admin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_admin)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -153,7 +166,8 @@
             this.xtraTabControl1.TabIndex = 3;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tp_DeSo,
-            this.tp_DeJP});
+            this.tp_DeJP,
+            this.tp_admin});
             // 
             // tp_DeSo
             // 
@@ -349,6 +363,103 @@
             this.gridColumn12.VisibleIndex = 6;
             this.gridColumn12.Width = 84;
             // 
+            // tp_admin
+            // 
+            this.tp_admin.Controls.Add(this.gridControl_admin);
+            this.tp_admin.Name = "tp_admin";
+            this.tp_admin.Size = new System.Drawing.Size(923, 531);
+            this.tp_admin.Text = "Admin";
+            // 
+            // gridControl_admin
+            // 
+            this.gridControl_admin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_admin.Location = new System.Drawing.Point(0, 0);
+            this.gridControl_admin.MainView = this.dgv_admin;
+            this.gridControl_admin.Name = "gridControl_admin";
+            this.gridControl_admin.Size = new System.Drawing.Size(923, 531);
+            this.gridControl_admin.TabIndex = 6;
+            this.gridControl_admin.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgv_admin});
+            // 
+            // dgv_admin
+            // 
+            this.dgv_admin.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn19});
+            this.dgv_admin.GridControl = this.gridControl_admin;
+            this.dgv_admin.Name = "dgv_admin";
+            this.dgv_admin.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.dgv_admin.OptionsBehavior.Editable = false;
+            this.dgv_admin.OptionsFind.AlwaysVisible = true;
+            this.dgv_admin.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "UserName";
+            this.gridColumn1.FieldName = "UserName";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 116;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Personnel name";
+            this.gridColumn2.FieldName = "Nhanvien";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 184;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Total row do";
+            this.gridColumn3.FieldName = "SoPhieuNhap";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 116;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Correct row";
+            this.gridColumn4.FieldName = "PhieuDung";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 102;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Wrong row";
+            this.gridColumn5.FieldName = "PhieuSai";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 94;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Time";
+            this.gridColumn6.FieldName = "ThoiGian";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "Performance (%)";
+            this.gridColumn19.FieldName = "HieuSuat";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 6;
+            this.gridColumn19.Width = 84;
+            // 
             // frm_NangSuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,6 +484,9 @@
             this.tp_DeJP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_DeJP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DeJP)).EndInit();
+            this.tp_admin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl_admin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_admin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,5 +520,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraTab.XtraTabPage tp_admin;
+        private DevExpress.XtraGrid.GridControl gridControl_admin;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgv_admin;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
     }
 }
